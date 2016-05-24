@@ -12,6 +12,8 @@
     <p><%= f.submit 'SIGN UP', class: 'signup_button '%></p>
 <% end %>
 
+<p><%= button_to 'CANCEL', root_path, method: :get %> </p>
+
 <% if flash[:errors] %>
   <p><%= flash[:errors] %></p>
 <%end%>

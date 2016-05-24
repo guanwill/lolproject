@@ -10,5 +10,8 @@
 
     <p><%= f.submit 'SAVE CHANGES', class: 'edit_button '%></p>
 <% end %>
-
 <!-- When you click save changes, we now need to edit def update in controllers to direct the new information to a specific location -->
+
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
+<%end%>
