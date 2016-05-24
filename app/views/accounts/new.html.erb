@@ -1,0 +1,17 @@
+<h1> JOIN US, SUMMONER! </h1>
+
+<%= form_for :account, url: accounts_path do |f| %>    <!--generate a form for table account.  :url is saying, when you submit, your data will go to the url '/account'-->
+    <p>Name: <%=f.text_field :name %> </p>
+    <p>IGN: <%=f.text_field :lol_username %> </p>
+    <p>State: <%=f.text_field :state %></p>
+    <p>Favourite Champion: <%=f.text_field :fav_champion %> </p>
+    <p>Favourite Position: <%=f.text_field :fav_position %></p>
+    <p>Favourite Game Mode: <%=f.text_field :fav_gamemode %></p>
+    <p>Favourite Item: <%=f.text_field :fav_item %></p>
+
+    <p><%= f.submit 'SIGN UP', class: 'signup_button '%></p>
+<% end %>
+
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
+<%end%>

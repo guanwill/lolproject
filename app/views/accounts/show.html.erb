@@ -1,0 +1,12 @@
+<h1> <%= @account.lol_username %> </h1>
+
+
+<p> Name: <%= @account.name %> </p>
+<P> State: <%= @account.state %> </p>
+<P> Favourite Champion: <%= @account.fav_champion %> </p>
+<P> Favourite Role: <%= @account.fav_position %> </p>
+<P> Favourite Gamemode: <%= @account.fav_gamemode %> </p>
+<P> Favourite Item: <%= @account.fav_item %> </p>
+
+<%= button_to 'EDIT', edit_account_path(@account) %> <!--when this button is created, it has a link to edit_account_path (accounts#edit) which is the edit.html.erb. We go there to write what we want the edit form to look like. We then go to controllers and update our def edit by giving a global variable so that edit.html.erb can use it -->
+<%= button_to 'DELETE', account_path(@account), method: :delete %>

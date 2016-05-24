@@ -1,0 +1,5 @@
+<h1> SUMMONERS </h1>
+
+<% Account.all.each do |account| %>
+  <p><%= link_to account.lol_username, account %> </p> <!--account here will take us to /account/:id which its details can only be shown via /accounts#show route-->
+<%end%>

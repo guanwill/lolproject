@@ -1,0 +1,14 @@
+<h1> IT'S OKAY TO CHANGE! </h1>
+
+<%= form_for @account, :method => :patch do |f| %>    <!--unlike new.html.erb, we are using the global variable in def edit, and declaring a method to patch, which means to overwrite our data-->
+    <p>IGN: <%=f.text_field :lol_username %> </p>
+    <p>State: <%=f.text_field :state %></p>
+    <p>Favourite Champion: <%=f.text_field :fav_champion %> </p>
+    <p>Favourite Position: <%=f.text_field :fav_position %></p>
+    <p>Favourite Game Mode: <%=f.text_field :fav_gamemode %></p>
+    <p>Favourite Item: <%=f.text_field :fav_item %></p>
+
+    <p><%= f.submit 'SAVE CHANGES', class: 'edit_button '%></p>
+<% end %>
+
+<!-- When you click save changes, we now need to edit def update in controllers to direct the new information to a specific location -->
