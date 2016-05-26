@@ -1,0 +1,34 @@
+<h1><b> RECENT MATCHES </b></h1>
+<!-- <p><%= @recent.inspect %></p> -->
+<hr>
+
+<% @recent["games"].each do |recent| %>
+    <h2> Game Stats </h2>
+    <p> Game Mode: <%= recent["gameMode"] %> <%= recent["gameType"] %> </p>
+    <p> Sub Game Type: <%= recent["subType"] %> </p>
+    <p> Map: <%= recent["mapId"] %> </p>
+    <% if recent["stats"]["win"] == true %>
+      <p> WL: Win </p>
+    <% else %>
+      <p> WL: Loss </p>
+    <%end%>
+    <p> IP Earned: <%= recent["ipEarned"] %> </p>
+    <p> Time Played: <%= recent["stats"]["timePlayed"]/60 %> minutes </p>
+    <p> Match Created: <%=Time.at(recent["createDate"]/1000).strftime("%H:%M %m/%d/%Y")%> </p>
+
+    <h2> Summoner Stats </h2>
+    <p> Champion: <%= recent["championId"] %> </p>
+    <p> Level: <%= recent["stats"]["level"] %></p>
+    <p> KDA: <%=recent["stats"]["championsKilled"]%>/<%=recent["stats"]["numDeaths"]%>/<%=recent["stats"]["assists"]%> Minion Kills: <%= recent["stats"]["minionsKilled"] %></p>
+    <p> Largest Multi-kill: <%= recent["stats"]["largestMultiKill"] %></p>
+    <p> Total Damage Dealt to Champions: <%= recent["stats"]["totalDamageDealtToChampions"] %></p>
+    <p> Total Damage Dealt: <%= recent["stats"]["totalDamageDealt"] %></p>
+    <p> Gold Earned: <%= recent["stats"]["goldEarned"] %> </p>
+    <p> Spell 1: <%= recent["spell1"] %> Spell 2: <%= recent["spell2"] %> </p>
+    Item 1: <%= recent["stats"]["item0"] %> Item 2: <%= recent["stats"]["item1"] %> Item 3: <%= recent["stats"]["item2"] %> Item 4: <%= recent["stats"]["item3"] %> Items 5: <%= recent["stats"]["item4"] %> Item 6: <%= recent["stats"]["item5"] %> Item 7: <%= recent["stats"]["item6"]  %> </p>
+
+    <!-- <p> Stats: <%= recent["stats"] %> </p> -->
+    <!-- <p> Players: <%= recent["fellowPlayers"] %> </p> -->
+    <hr>
+
+<%end%>

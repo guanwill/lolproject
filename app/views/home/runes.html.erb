@@ -1,0 +1,21 @@
+<h1><b> RUNES </b></h1>
+<hr>
+<!-- <p><%= @runes.inspect %><p> -->
+
+<% @runes["#{params[:summonerID]}"]["pages"].each do |runes| %>
+    <p><b><%= runes["name"] %> </b></p>
+
+    <% if runes["current"] == true %>
+      <p> Current: Yes </p>
+    <% else %>
+      <p> Current: No
+    <% end %>
+
+    <% i = 0 %>
+    <% while i < 30 %>
+      <p>Slot <%= runes["slots"][i]["runeSlotId"] %>: <%= runes["slots"][i]["runeId"] %></p>
+      <% i += 1 %>
+    <%end%>
+
+    <hr>
+<%end%>

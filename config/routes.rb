@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
   root 'home#index'
+  post '/search' => 'home#search'
+  get '/masteries/:summonerID' => 'home#masteries'
+  get '/runes/:summonerID' => 'home#runes'
+  get '/recent/:summonerID' => 'home#recent'
+  get '/queue/:summonerID' => 'home#queue'
+  get '/league/:summonerID' => 'home#league'
 
   resources :accounts
 
