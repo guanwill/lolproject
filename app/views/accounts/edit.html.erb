@@ -2,6 +2,9 @@
 
 <%= form_for @account, :method => :patch do |f| %>    <!--unlike new.html.erb, we are using the global variable in def edit, and declaring a method to patch, which means to overwrite our data-->
     <p>IGN: <%=f.text_field :lol_username %> </p>
+    <p>Email: <%=f.text_field :email %> </p>
+    <p>Password: <%=f.password_field :password %> </p>
+    <p>Password Confirmation: <%=f.password_field :password_confirmation %> </p>
     <p>State: <%=f.text_field :state %></p>
     <p>Favourite Champion: <%=f.text_field :fav_champion %> </p>
     <p>Favourite Position: <%=f.text_field :fav_position %></p>
@@ -11,6 +14,8 @@
     <p><%= f.submit 'SAVE CHANGES', class: 'edit_button '%></p>
 <% end %>
 <!-- When you click save changes, we now need to edit def update in controllers to direct the new information to a specific location -->
+
+<p><%= button_to 'CANCEL', root_path, method: :get %> </p>
 
 <% if flash[:errors] %>
   <p><%= flash[:errors] %></p>

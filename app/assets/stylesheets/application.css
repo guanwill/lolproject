@@ -1,15 +1,77 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  display: block;
+  text-align: right;
+  margin: 8px;
+}
+li {
+  display: inline-block;
+  /*padding: 5px;*/
+}
+.nav_text {
+  text-decoration: none;
+  padding: 8px;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all .1s ease-in-out;
+}
+.nav_text:hover {
+  color: rgb(62, 154, 121);
+}
+.nav {
+  background: black;
+  border-top: 1px solid black;
+  border-bottom: 5px solid rgba(6, 63, 161, 0.63);
+}
+html {
+  background: url("http://s33.postimg.org/h8lwd7wtb/lolashe2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.home_heading {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 180px;
+  margin: 0;
+  font: 90px 'Lobster';
+  text-shadow: 0 0 20px blue;
+  font-weight: bold;
+  color: black;
+}
+.home_description {
+  position: relative;
+  top: 190px;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+.search_input {
+  position: relative;
+  top: 200px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  width: 34%;
+  box-shadow: 0 0 10px blue;
+}
+.search_button {
+  position: relative;
+  top: 220px;
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px 7px 20px;
+  color: white;
+  background: black;
+  border-radius: 20px;
+  font-size: 18px;
+  border: 0;
+}
+.search_button:hover {
+  box-shadow: 0 0 20px blue;
+  color: rgb(40, 129, 161);
+}

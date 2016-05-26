@@ -1,9 +1,7 @@
-<h1> Welcome to LOL BUDDIES! </h1>
+<h1 class="home_heading"> Stealth Ward </h1>
+<p class="home_description"> An extremely powerful ward that lets you see any summoner's secrets.</p>
 
-<p><%= link_to 'SIGN UP', new_account_path %></p>
-<p><%= link_to 'LOL BUDDIES COMMUNITY', accounts_path %></p>
-
-<form action = "/search" method = "POST">
-  <input type="text" name="summonerName" placeholder="Stalk a summoner here">
-  <button type="submit" name="button" >SEARCH</button>
+<form class= "api_form" action = "/search" method = "POST">
+  <input class= "search_input" type="text" name="summonerName" placeholder="Stalk a Summoner here!">
+  <p><button class="search_button" type="submit" name="button" >Search</button></p>
 </form>

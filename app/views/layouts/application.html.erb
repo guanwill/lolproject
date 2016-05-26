@@ -5,8 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab|Merriweather|Arvo|Sigmar+One|Pacifico|Play' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
+  <header class="nav">
+      <ul>
+        <li> <%= link_to 'Home', root_path, class: 'nav_text' %> </li>
+        <li><%= link_to 'Community', accounts_path, class: 'nav_text' %></li>
+        <% if logged_in? %>
+        <li> <%= link_to 'Logout', login_path, class: 'nav_text', :method => :delete, :data => {
+          :confirm => 'Are you sure?'} %> </li>
+        <%else%>
+        <li><%= link_to 'Login', login_path, class: 'nav_text' %></li>
+        <li><%= link_to 'Sign Up', new_account_path, class: 'nav_text' %></li>
+        <%end%>
+      </ul>
+    </header>
 
 <%= yield %>
 

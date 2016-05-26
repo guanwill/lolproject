@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :accounts
 
+  get '/login' => 'session#new'
+  post '/login' => 'session#create' #for creating account and and logging in
+  delete '/login' => 'session#destroy'  #for logging out
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
