@@ -11,6 +11,13 @@ li {
   display: inline-block;
   /*padding: 5px;*/
 }
+li.welcome_user {
+  padding: 8px;
+  color: rgb(40, 129, 161);
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  /*font-weight: bold;*/
+}
 .nav_text {
   text-decoration: none;
   padding: 8px;
@@ -29,7 +36,7 @@ li {
   border-bottom: 5px solid rgba(6, 63, 161, 0.63);
 }
 html {
-  background: url("http://s33.postimg.org/h8lwd7wtb/lolashe2.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/80l5g4fn3/lolashe5.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .home_heading {
@@ -39,9 +46,13 @@ html {
   top: 180px;
   margin: 0;
   font: 90px 'Lobster';
-  text-shadow: 0 0 20px blue;
   font-weight: bold;
   color: black;
+  transition: all .2s ease-in-out;
+  text-shadow: 0 0 20px rgba(40, 78, 215, 0.85);
+}
+.home_heading:hover {
+  /*text-shadow: 0 0 20px rgba(40, 78, 215, 0.85);*/
 }
 .home_description {
   position: relative;
@@ -58,6 +69,9 @@ html {
   padding: 10px;
   width: 34%;
   box-shadow: 0 0 10px blue;
+  text-shadow: 0 0 20px blue;
+  font-size: 15px;
+  text-align: center;
 }
 .search_button {
   position: relative;
