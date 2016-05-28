@@ -35,7 +35,7 @@ li.welcome_user {
   border-bottom: 5px solid rgba(6, 63, 161, 0.63);
 }
 html {
-  background: url("http://s33.postimg.org/80l5g4fn3/lolashe5.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/5lurmxenz/lolashe2.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .home_heading {
@@ -46,45 +46,83 @@ html {
   margin: 0;
   font: 90px 'Lobster';
   /*font-weight: bold;*/
-  color: black;
+  color: #73cbde;
   transition: all .2s ease-in-out;
-  text-shadow: 0 0 20px rgba(40, 78, 215, 0.85);
+  /*text-shadow: 3px 0 10px #73cbde, 0 -3px 10px #73cbde, 0 3px 10px #73cbde, -3px 0 10px #73cbde;*/
+  /*text-shadow: 3px 0 0 rgb(40, 78, 215), 0 -3px 0 rgb(40, 78, 215), 0 3px 0 rgb(40, 78, 215), -3px 0 0 rgb(40, 78, 215);*/
+  text-shadow: 5px 5px 20px #73cbde;
+  /*text-shadow: 0 0 20px rgba(40, 78, 215, 0.85);*/
 }
 .home_heading:hover {
   /*text-shadow: 0 0 20px rgba(40, 78, 215, 0.85);*/
 }
-.home_description {
+/*.home_description {
   position: relative;
   top: 190px;
   display: block;
   text-align: center;
   font-family: 'Roboto Slab', serif;
-}
+}*/
 .search_input {
   position: relative;
-  top: 200px;
+  top: 230px;
   display: block;
   margin: 0 auto;
   padding: 10px;
-  width: 34%;
-  box-shadow: 0 0 10px blue;
+  width: 30%;
+  box-shadow: 0 0 10px #73cbde;
   text-shadow: 0 0 20px blue;
   font-size: 15px;
   text-align: center;
+  border: 0;
+  color: black;
+  /*font-weight: bold;*/
+  /*background: rgba(182, 236, 240, 0.41)*/
 }
 .search_button {
   position: relative;
-  top: 220px;
+  top: 240px;
   display: block;
   margin: 0 auto;
   padding: 7px 20px 7px 20px;
   color: white;
   background: black;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 14px;
   border: 0;
 }
 .search_button:hover {
+  /*box-shadow: 3px 0 20px #73cbde, 0 -3px 20px #73cbde, 0 3px 20px #73cbde, -3px 0 20px #73cbde;*/
   box-shadow: 0 0 20px blue;
-  color: rgb(40, 129, 161);
+  color: #73cbde;
+}
+.logo {
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  =position: absolute;
+  left: 5px;
+}
+body {
+  /*body { background-color:#333; }*/
+}
+
+#snow{
+	background: none;
+	font-family: Androgyne;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }

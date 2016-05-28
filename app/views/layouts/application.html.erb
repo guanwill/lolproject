@@ -5,14 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <link href='https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab|Merriweather|Arvo|Sigmar+One|Pacifico|Play' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 </head>
 <body>
 
-  <header class="nav">
+  <div id="snow">
+
+    <header class="nav">
       <ul>
+        <!-- <li class="logo"> LOLward </li> -->
+        <!-- <img class='logo' src="http://s33.postimg.org/az6btpr5r/lol_logo2.jpg" alt=""> -->
         <li> <%= link_to 'Home', root_path, class: 'nav_text' %> </li>
         <li><%= link_to 'Community', accounts_path, class: 'nav_text' %></li>
 
@@ -29,7 +35,9 @@
       </ul>
     </header>
 
+
 <%= yield %>
+  </div>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <!-- <p><%= @summoner["#{params[:summonerName]}"].inspect %></p> -->
 
 <p><b> Summoner Details </b></p>
-<!-- <p>Summoner Name: <%= @summoner["#{params[:summonerName]}"]["name"].inspect %></p> -->
+<p>Summoner Name: <%= @summoner["#{params[:summonerName]}"]["name"].inspect %></p>
 <!-- <p>Summoner ID: <%= @summoner["#{params[:summonerName]}"]["id"].inspect %></p> -->
 <p>Level: <%= @summoner["#{params[:summonerName]}"]["summonerLevel"].inspect %></p>
 <p><a href = "/queue/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Wins </a></p>
