@@ -1,9 +1,11 @@
 class AccountsController < ApplicationController
   def index
+    @account = Account.all
   end
 
   def create
-    @account = Account.create(account_params)
+    @account = Account.new(account_params)
+
     if @account.save
       session[:account_id] = @account.id  #must create a session for user to use where thet are in. database only exists while user is logged in and thats it
       redirect_to root_path  #when user creates an account, we auto log them into a 'session' and take them to the root path /homepage

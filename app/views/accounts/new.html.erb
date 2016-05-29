@@ -1,22 +1,46 @@
-<h1> JOIN US, SUMMONER! </h1>
 
-<%= form_for :account, url: accounts_path do |f| %>    <!--generate a form for table account.  :url is saying, when you submit, your data will go to the url '/account'-->
-    <p>Username: <%=f.text_field :name %> </p>
-    <p>LoL IGN: <%=f.text_field :lol_username %> </p>
-    <p>Email: <%=f.text_field :email %> </p>
-    <p>Password: <%=f.password_field :password %> </p>
-    <p>Password Confirmation: <%=f.password_field :password_confirmation %> </p>
-    <p>State: <%=f.text_field :state %></p>
-    <p>Favourite Champion: <%=f.text_field :fav_champion %> </p>
-    <p>Favourite Position: <%=f.text_field :fav_position %></p>
-    <p>Favourite Game Mode: <%=f.text_field :fav_gamemode %></p>
-    <p>Favourite Item: <%=f.text_field :fav_item %></p>
-
-    <p><%= f.submit 'SIGN UP', class: 'signup_button '%></p>
-<% end %>
-
-<p><%= button_to 'CANCEL', root_path, method: :get %> </p>
+<div id="signupform">
+<h1 id = "signupheading"> Join us, Summoner! </h1>
 
 <% if flash[:errors] %>
   <p><%= flash[:errors] %></p>
 <%end%>
+
+<%= form_for :account, url: accounts_path do |f| %>    <!--generate a form for table account.  :url is saying, when you submit, your data will go to the url '/account'-->
+    <p class="signup-title">Username </p>
+    <p class="p-signup-field"><%=f.text_field :name, class: 'signupfield' %> </p>
+
+    <p class="signup-title">League of legends Username </p>
+    <p class="p-signup-field"><%=f.text_field :lol_username, class: 'signupfield' %></p>
+
+    <p class="signup-title">Email </p>
+    <p class="p-signup-field"><%=f.text_field :email, class: 'signupfield' %> </p>
+
+    <p class="signup-title">Password </p>
+    <p class="p-signup-field"><%=f.password_field :password, class: 'signupfield' %></p>
+
+    <p class="signup-title">Password Confirmation  </p>
+    <p class="p-signup-field"><%=f.password_field :password_confirmation, class: 'signupfield' %></p>
+
+    <p class="signup-title">State </p>
+    <p class="p-signup-field"><%=f.text_field :state, class: 'signupfield' %></p>
+
+    <p class="signup-title-fav">Favourite Champion </p>
+    <p class="p-signup-field"><%=f.text_field :fav_champion, class: 'signupfield' %> </p>
+
+    <p class="signup-title-fav">Favourite Position </p>
+    <p class="p-signup-field"><%=f.text_field :fav_position, class: 'signupfield' %></p>
+
+    <p class="signup-title-fav">Favourite Game Mode </p>
+    <p class="p-signup-field"><%=f.text_field :fav_gamemode, class: 'signupfield' %></p>
+
+    <p class="signup-title-fav">Favourite Item </p>
+    <p class="p-signup-field"><%=f.text_field :fav_item, class: 'signupfield' %></p>
+
+    <%= f.submit 'SIGN UP', class: 'signup_button '%>
+<% end %>
+
+<p> </p>
+
+</div>
+<!-- <%= button_to 'CANCEL', root_path, class: 'cancel_signup_button', method: :get %> -->

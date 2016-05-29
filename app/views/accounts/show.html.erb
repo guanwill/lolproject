@@ -1,18 +1,36 @@
-<h1> <%= @account.lol_username %> </h1>
+<div id="summonerdetail">
+
+  <h1 class="summonerdetailheading"> <%= @account.lol_username %> </h1>
 
 
-<p> Name: <%= @account.name %> </p>
-<p> IGN: <%= @account.lol_username %> </p>
-<P> State: <%= @account.state %> </p>
-<P> Favourite Champion: <%= @account.fav_champion %> </p>
-<P> Favourite Role: <%= @account.fav_position %> </p>
-<P> Favourite Gamemode: <%= @account.fav_gamemode %> </p>
-<P> Favourite Item: <%= @account.fav_item %> </p>
-<form action = "/search" method = "POST">
-  <input type="text" name="summonerName" placeholder="Stalk this summoner here">
-  <button type="submit" name="button" >SEARCH</button>
-</form>
+  <p class="summonerdetails_label"> Name </p>
+  <p class="summonerdetails_answer"> <%= @account.name %> </p>
 
-<p><%= button_to 'EDIT', edit_account_path(@account), method: :get %></p><!--when this button is created, it has a link to edit_account_path (accounts#edit) which is the edit.html.erb. We go there to write what we want the edit form to look like. We then go to controllers and update our def edit by giving a global variable so that edit.html.erb can use it -->
-<p><%= button_to 'DELETE', account_path(@account), method: :delete %></p>
-<p><%= button_to 'BACK', accounts_path(@account), method: :get %></p>
+  <p class="summonerdetails_label"> League of Legends Username </p>
+  <p class="summonerdetails_answer"><%= @account.lol_username %> </p>
+
+  <P class="summonerdetails_label"> State  </p>
+  <p class="summonerdetails_answer"><%= @account.state %></p>
+
+  <P class="summonerdetails_label"> Favourite Champion </p>
+  <p class="summonerdetails_answer"><%= @account.fav_champion %> </p>
+
+  <P class="summonerdetails_label"> Favourite Role  </p>
+  <p class="summonerdetails_answer"><%= @account.fav_position %></p>
+
+  <P class="summonerdetails_label"> Favourite Gamemode  </p>
+  <p class="summonerdetails_answer"><%= @account.fav_gamemode %></p>
+
+  <P class="summonerdetails_label"> Favourite Item  </p>
+  <p class="summonerdetails_answer"><%= @account.fav_item %></p>
+
+  <form action = "/search" method = "POST">
+    <input type="text" name="summonerName" placeholder="Stalk this summoner here">
+    <button type="submit" name="button" >SEARCH</button>
+  </form>
+
+  <p><%= button_to 'EDIT', edit_account_path(@account), method: :get %> <%= button_to 'DELETE', account_path(@account), method: :delete %></p>
+
+  <p><%= button_to 'BACK', accounts_path(@account), method: :get %></p>
+
+</div>

@@ -1,3 +1,4 @@
+/*----------LAYOUT----------*/
 html, body {
   padding: 0;
   margin: 0;
@@ -12,7 +13,7 @@ li {
   /*padding: 5px;*/
 }
 li.welcome_user {
-  padding: 8px;
+  /*padding: 8px;*/
   color: rgb(40, 129, 161);
   font-family: 'Merriweather', serif;
   font-size: 15px;
@@ -33,16 +34,22 @@ li.welcome_user {
   background: black;
   border-top: 1px solid black;
   border-bottom: 5px solid rgba(6, 63, 161, 0.63);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 html {
   background: url("http://s33.postimg.org/5lurmxenz/lolashe2.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+
+/*---------HOME PAGE---------*/
 .home_heading {
   display: block;
   text-align: center;
   position: relative;
-  top: 180px;
+  top: 240px;
   margin: 0;
   font: 90px 'Lobster';
   /*font-weight: bold;*/
@@ -65,51 +72,51 @@ html {
 }*/
 .search_input {
   position: relative;
-  top: 230px;
+  top: 280px;
   display: block;
   margin: 0 auto;
   padding: 10px;
   width: 30%;
   box-shadow: 0 0 10px #73cbde;
-  text-shadow: 0 0 20px blue;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
   font-size: 15px;
   text-align: center;
   border: 0;
   color: black;
-  /*font-weight: bold;*/
+  font-weight: bold;
   /*background: rgba(182, 236, 240, 0.41)*/
 }
 .search_button {
   position: relative;
-  top: 240px;
+  top: 290px;
   display: block;
   margin: 0 auto;
   padding: 7px 20px 7px 20px;
   color: white;
-  background: black;
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
   font-size: 14px;
   border: 0;
 }
 .search_button:hover {
   /*box-shadow: 3px 0 20px #73cbde, 0 -3px 20px #73cbde, 0 3px 20px #73cbde, -3px 0 20px #73cbde;*/
-  box-shadow: 0 0 20px blue;
+  /*box-shadow: 0 0 20px #367b8a;*/
   color: #73cbde;
 }
-.logo {
+/*.logo {
   color: white;
   font-family: 'Roboto Slab', serif;
   =position: absolute;
   left: 5px;
-}
+}*/
 body {
   /*body { background-color:#333; }*/
 }
 
-#snow{
+/*#snow{
 	background: none;
 	font-family: Androgyne;
-	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	background-image: url('http://s33.postimg.org/b7dtoh4tb/snow1.png'), url('http://s33.postimg.org/mvh2ai8pr/snow2.png'), url('http://s33.postimg.org/yxzf1d0v3/snow3.png');
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -125,4 +132,263 @@ body {
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}*/
+
+/*----------SIGN UP PAGE----------*/
+#signupform {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 30px;
+}
+.signup-title{
+  margin: 0;
+  position: relative;
+  top: 30px;
+  font-family: 'Merriweather', serif;
+  color: black;
+}
+.signup-title-fav{
+  margin: 0;
+  position: relative;
+  top: 30px;
+  font-family: 'Merriweather', serif;
+  color: black;
+}
+.p-signup-field {
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.signupfield {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  width: 26%;
+  box-shadow: 0 0 10px #73cbde;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
+  font-size: 15px;
+  text-align: center;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  background: rgba(1, 1, 1, 0.5);
+}
+#signupheading {
+ font-family: 'Allan', Helvetica, Arial, sans-serif;
+ font-size: 50px;
+ line-height: 70px;
+ position: relative;
+ top: 37px;
+ text-shadow: 0 0 20px #73cbde;
+ color: rgb(41, 62, 138);
+
+ /*text-shadow: 0 0 20px #73cbde;*/
+}
+.signup_button{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+.signup_button:hover{
+  color: #73cbde;
+}
+/*.cancel_signup_button {
+  margin: 10px 0 20px 0;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+.cancel_signup_button:hover{
+  color: #73cbde;
+}*/
+
+/*----------LOGIN PAGE----------*/
+
+#login_form {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/i15bzczhb/Summoners_Rift3.jpg") no-repeat center center fixed;
+  /*background: url("http://s33.postimg.org/42q3345un/Summoners_Rift2.jpg")*/
+  border-radius: 20px;
+  /*box-shadow: 10px 10px 10px rgb(114, 120, 156);*/
+  margin: 0 20% 2% 20%;
+  position: relative;
+  top: 200px;
+  border: 5px solid rgb(93, 93, 93);
+}
+#login_heading {
+  font-family: 'Montelo', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+  text-shadow: 0 0 20px #73cbde;
+  color: rgb(18, 65, 68);
+}
+.login_title{
+  margin: 0;
+  /*position: relative;*/
+  /*top: 30px;*/
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-size: 20px;
+}
+.login_field {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 5px;
+  width: 35%;
+  box-shadow: 0 0 10px #73cbde;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
+  font-size: 15px;
+  text-align: center;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  background: rgba(1, 1, 1, 0.5);
+  /*position: relative;*/
+  /*top: 30px;*/
+}
+.login_input {
+  position: relative;
+  top: 30px;
+  height: 300px;
+}
+.login_button{
+  position: relative
+  margin: 50px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+.login_button:hover{
+  color: #73cbde;
+}
+
+/*----------COMMUNITY----------*/
+#summonerlist{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 30px;
+}
+#summonerlistheading {
+  font-family: 'Allan', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+  text-shadow: 0 0 20px #73cbde;
+  color: rgb(41, 62, 138);
+}
+.summonerdetails {
+  text-decoration: none;
+  color: black;
+}
+.summonerdetails:visited {
+  text-decoration: none;
+  color: black;
+}
+.summonerdetails:hover {
+  text-decoration: none;
+  color: lightblue;
+}
+.listdescription {
+  font-family: 'Merriweather', serif;
+  margin: 50px 0 20px 0;
+}
+#poster {
+  margin: 0 15px 30px 15px;
+  padding: 5px;
+  width: 20%;
+  box-shadow: 0 0 10px #73cbde;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
+  font-size: 15px;
+  text-align: center;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  background: rgba(1, 1, 1, 0.5);
+}
+#btn, #btn-showall {
+  margin-bottom: 30px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+#btn:hover, #btn-showall:hover {
+  color: #73cbde;
+}
+.home_button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+.home_button:hover {
+  color: #73cbde;
+}
+
+/*----------SUMMONER DETAILS----------*/
+#summonerdetail {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/5qoa3dxgf/bilgewater2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 30% 2% 30%;
+  min-width: 200px;
+  position: relative;
+  top: 60px;
+  border: 8px outset rgb(71, 70, 69);
+}
+.summonerdetailheading {
+  color: black;
+  font-family: 'Corben', serif;
+}
+.summonerdetails_label{
+  color: rgb(42, 42, 42);
+  margin: 0;
+  font-size: 25px;
+  font-family: 'Sansita one', serif;
+}
+.summonerdetails_answer {
+  margin: 5px 0 20px 0;
+  color: rgb(41, 59, 93);
+  font-size: 25px;
+  font-family: 'Raleway', serif;
 }

@@ -1,8 +1,18 @@
-<h1> SUMMONERS </h1>
-<p>....this is the holy place to make new allies.</p>
+<div id="summonerlist">
 
-<% Account.all.each do |account| %>
-  <p><%= link_to account.lol_username, account %> </p> <!--account here will take us to /account/:id which its details can only be shown via /accounts#show route-->
-<%end%>
+  <h1 id="summonerlistheading"> Home of LOLward </h1>
+  <p class="listdescription">....the holy place to make new allies.</p>
 
-<%= button_to 'HOME', root_path, method: :get %>
+  <input id='poster' type="text" placeholder="Search by Member's name">
+  <button id='btn'>Search</button>
+  <button id='btn-showall'>Show All</button>
+
+  <div id='posts'>
+  <% Account.all.each do |account| %>
+    <p class="<%=account.name%>"><%= link_to account.name, account, class: 'summonerdetails' %> </p>
+  <%end%>
+  </div>
+
+  <%= button_to 'HOME', root_path, class: 'home_button', method: :get %>
+
+</div>

@@ -15,7 +15,7 @@
 <% end %>
 <!-- When you click save changes, we now need to edit def update in controllers to direct the new information to a specific location -->
 
-<p><%= button_to 'CANCEL', root_path, method: :get %> </p>
+<p><%= button_to 'CANCEL', accounts_path, method: :get %> </p>
 
 <% if flash[:errors] %>
   <p><%= flash[:errors] %></p>
