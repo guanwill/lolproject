@@ -30,7 +30,7 @@ class AccountsController < ApplicationController
   end
 
   def show
-    @account = Account.find(params[:id])   
+    @account = Account.find(params[:id])
   end
 
   def update
@@ -55,7 +55,7 @@ class AccountsController < ApplicationController
 
   def destroy
     @account = Account.find(params[:id])
-    @account.destroy   #when cat gets deleted, where do we then want to redirect the user
+    @account.destroy
     redirect_to root_path
   end
 

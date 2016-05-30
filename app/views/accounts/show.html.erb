@@ -1,6 +1,6 @@
 <div id="summonerdetail">
 
-  <h1 class="summonerdetailheading"> <%= @account.lol_username %> </h1>
+  <h1 class="summonerdetailheading"> <%= @account.name %> </h1>
 
 
   <p class="summonerdetails_label"> Name </p>
@@ -29,7 +29,7 @@
     <button class="stalkheresubmit" type="submit" name="button" >Search</button>
   </form>
 
-  <%if current_user && @account.id == current_user.id %>
+  <%if current_user && @account.id == current_user.id %> <!--if the account id of this profile is the same as the person logged in right now(current user's id), then show the edit and delete button for this person -->
     <%= button_to edit_account_path(@account), class: 'edit_profile', method: :get do %>
       <i class="fa fa-pencil-square-o fa-2x"></i>
     <%end%>

@@ -1,8 +1,10 @@
-<h1><b> QUEUE SUMMARY </b></h1>
-<hr>
+<div id="queue">
+
+<h1 id="queuesummary"><b> Queue Summary </b></h1>
 
 <% @queue["playerStatSummaries"].each do |queue| %>
-    <p> <%= queue["playerStatSummaryType"] %> </p>
-    <p> Wins: <%= queue["wins"] %> </p>
-    <hr>
+    <p class="queuetype"> <%= queue["playerStatSummaryType"] %> </p>
+    <p class="queuewins"> Wins: <%= queue["wins"] %> </p>
 <%end%>
+
+</div>

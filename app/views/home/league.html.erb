@@ -1,7 +1,10 @@
-<h1> <%= @league["#{params[:summonerID]}"][0]["name"] %> </h1>
-<hr>
+<div id="league">
 
-<p> Rank: <%= @league["#{params[:summonerID]}"][0]["tier"] %> <%= @league["#{params[:summonerID]}"][0]["entries"][0]["division"] %> </p>
-<p> Queue: <%= @league["#{params[:summonerID]}"][0]["queue"] %> </p>
-<p> Wins: <%= @league["#{params[:summonerID]}"][0]["entries"][0]["wins"] %> </p>
-<p> Losses: <%= @league["#{params[:summonerID]}"][0]["entries"][0]["losses"] %> </p>
+<h1 id="leagueheading"> <%= @league["#{params[:summonerID]}"][0]["name"] %> </h1>
+
+<p class="tier"> <%= @league["#{params[:summonerID]}"][0]["tier"] %> <%= @league["#{params[:summonerID]}"][0]["entries"][0]["division"] %> </p>
+<p class="leaguedetails"><%= @league["#{params[:summonerID]}"][0]["queue"] %> </p>
+<p class="leaguedetails"> Wins: <%= @league["#{params[:summonerID]}"][0]["entries"][0]["wins"] %> </p>
+<p class="leaguedetails"> Losses: <%= @league["#{params[:summonerID]}"][0]["entries"][0]["losses"] %> </p>
+
+</div>

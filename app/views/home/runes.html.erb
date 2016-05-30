@@ -1,14 +1,15 @@
-<h1><b> RUNES </b></h1>
-<hr>
+<div id="runes">
+
+<h1 id="runes_heading"><b> Runes </b></h1>
 <!-- <p><%= @runes.inspect %><p> -->
 
 <% @runes["#{params[:summonerID]}"]["pages"].each do |runes| %>
-    <p><b><%= runes["name"] %> </b></p>
+    <p class="runes_category"><b><%= runes["name"] %> </b></p>
 
     <% if runes["current"] == true %>
-      <p> Current: Yes </p>
+      <p class="runes_current"> Current: Yes </p>
     <% else %>
-      <p> Current: No
+      <p class="runes_current"> Current: No
     <% end %>
 
     <% i = 0 %>
@@ -17,5 +18,6 @@
       <% i += 1 %>
     <%end%>
 
-    <hr>
 <%end%>
+
+</div>

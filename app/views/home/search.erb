@@ -1,13 +1,20 @@
-<h1> <%=params[:summonerName]%> </h1>
-<hr>
+<div id="playerstats">
+
+<h1 id="summoner_name"> <%=params[:summonerName]%> </h1>
 <!-- <p><%= @summoner["#{params[:summonerName]}"].inspect %></p> -->
 
-<p><b> Summoner Details </b></p>
-<p>Summoner Name: <%= @summoner["#{params[:summonerName]}"]["name"].inspect %></p>
-<!-- <p>Summoner ID: <%= @summoner["#{params[:summonerName]}"]["id"].inspect %></p> -->
-<p>Level: <%= @summoner["#{params[:summonerName]}"]["summonerLevel"].inspect %></p>
-<p><a href = "/queue/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Wins </a></p>
-<p><a href = "/league/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> League </a></p>
-<p><a href = "/masteries/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Masteries </a></p>
-<p><a href = "/runes/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Runes </a></p>
-<p><a href = "/recent/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Recent Matches </a></p>
+<!-- <p><b> Summoner Details </b></p> -->
+
+<p class="level">Level <%= @summoner["#{params[:summonerName]}"]["summonerLevel"] %></p>
+
+<p><a class="statslink" href = "/queue/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Wins </a></p>
+
+<p><a class="statslink" href = "/league/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> League </a></p>
+
+<p><a class="statslink" href = "/masteries/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Masteries </a></p>
+
+<p><a class="statslink" href = "/runes/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Runes </a></p>
+
+<p><a class="statslink" href = "/recent/<%=@summoner["#{params[:summonerName]}"]["id"]%>"> Recent Matches </a></p>
+
+</div>

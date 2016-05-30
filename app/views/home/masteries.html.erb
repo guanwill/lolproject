@@ -1,22 +1,22 @@
-<h1><b> MASTERIES </b></h1>
-<hr>
-<!-- <p><%= @masteries.inspect %></p> -->
+<div id="masteries">
+
+<h1 id="masteries_heading"><b> Masteries </b></h1>
 
 <% @masteries["#{params[:summonerID]}"]["pages"].each do |masteries| %>
-    <p><b><%= masteries["name"] %> </b></p>
+    <p class="masteries_category"><b><%= masteries["name"] %> </b></p>
 
     <% if masteries["current"] == true %>
-      <p> Current: Yes </p>
+      <p class="masteries_details"> Current: Yes </p>
     <% else %>
-      <p> Current: No
+      <p class="masteries_details"> Current: No
     <% end %>
 
     <% i = 0 %>
     <% while i < 10 %>
-      <p>Mastery: <%= masteries["masteries"][i]["id"] %></p>
-      <p>Rank: <%= masteries["masteries"][i]["rank"] %></p>
+      <p class="masteries_name">Mastery: <%= masteries["masteries"][i]["id"] %>&nbsp&nbsp&nbsp Rank: <%= masteries["masteries"][i]["rank"] %></p>
       <% i += 1 %>
     <%end%>
 
-    <hr>
 <%end%>
+
+</div>

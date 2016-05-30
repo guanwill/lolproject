@@ -1,22 +1,45 @@
-<h1> IT'S OKAY TO CHANGE! </h1>
+<div id="edit_details">
+
+<h1 id="edit_heading"> It's okay to change! </h1>
 
 <%= form_for @account, :method => :patch do |f| %>    <!--unlike new.html.erb, we are using the global variable in def edit, and declaring a method to patch, which means to overwrite our data-->
-    <p>IGN: <%=f.text_field :lol_username %> </p>
-    <p>Email: <%=f.text_field :email %> </p>
-    <p>Password: <%=f.password_field :password %> </p>
-    <p>Password Confirmation: <%=f.password_field :password_confirmation %> </p>
-    <p>State: <%=f.text_field :state %></p>
-    <p>Favourite Champion: <%=f.text_field :fav_champion %> </p>
-    <p>Favourite Position: <%=f.text_field :fav_position %></p>
-    <p>Favourite Game Mode: <%=f.text_field :fav_gamemode %></p>
-    <p>Favourite Item: <%=f.text_field :fav_item %></p>
 
-    <p><%= f.submit 'SAVE CHANGES', class: 'edit_button '%></p>
+    <p class="edit_label">IGN:  </p>
+    <p><%=f.text_field :lol_username, class: 'edit_answer' %></p>
+
+    <p class="edit_label">Email: </p>
+    <p><%=f.text_field :email, class: 'edit_answer' %> </p>
+
+    <p class="edit_label">Password:  </p>
+    <p><%=f.password_field :password, class: 'edit_answer' %></p>
+
+    <p class="edit_label">Password Confirmation:  </p>
+    <p><%=f.password_field :password_confirmation, class: 'edit_answer' %></p>
+
+    <p class="edit_label">State: </p>
+    <p><%=f.text_field :state, class: 'edit_answer' %></p>
+
+    <p class="edit_label">Favourite Champion: </p>
+    <p><%=f.text_field :fav_champion, class: 'edit_answer' %> </p>
+
+    <p class="edit_label">Favourite Position: </p>
+    <p><%=f.text_field :fav_position, class: 'edit_answer' %></p>
+
+    <p class="edit_label">Favourite Game Mode: </p>
+    <p><%=f.text_field :fav_gamemode, class: 'edit_answer' %></p>
+
+    <p class="edit_label">Favourite Item: </p>
+    <p><%=f.text_field :fav_item, class: 'edit_answer' %></p>
+
+
+    <p><%= f.submit 'SAVE', class: 'edit_button '%></p>
 <% end %>
 <!-- When you click save changes, we now need to edit def update in controllers to direct the new information to a specific location -->
 
-<p><%= button_to 'CANCEL', accounts_path, method: :get %> </p>
+<p><%= button_to 'CANCEL', accounts_path, class: 'cancel_edit', method: :get %> </p>
 
 <% if flash[:errors] %>
   <p><%= flash[:errors] %></p>
 <%end%>
+
+</div>

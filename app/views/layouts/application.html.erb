@@ -27,7 +27,8 @@
         <li><%= link_to 'Community', accounts_path, class: 'nav_text' %></li>
 
         <% if logged_in? %>
-        <li class="welcome_user">Welcome, <%= current_user.name %>! </li>
+        <li class="welcome_user"> Welcome, <%= current_user.name %>! </li>
+
         <li> <%= link_to 'Logout', login_path, class: 'nav_text', :method => :delete, :data => {
           :confirm => 'Are you sure?'} %> </li>
 

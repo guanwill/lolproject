@@ -282,6 +282,7 @@ body {
 }
 .login_button{
   position: relative;
+  bottom: 40px;
   margin: 50px;
   padding: 4px 15px 4px 15px;
   color: white;
@@ -469,4 +470,306 @@ body {
 }
 .delete_profile:hover {
   color: rgb(233, 207, 68);
+}
+
+/*----------EDIT PAGE-----------*/
+#edit_details {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 30px;
+}
+.edit_label {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  color: black;
+  position: relative;
+  top: 30px;
+}
+.edit_answer {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  width: 26%;
+  box-shadow: 0 0 10px #73cbde;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
+  font-size: 15px;
+  text-align: center;
+  border: 0;
+  color: white;
+  border-radius: 5px;
+  background: rgba(1, 1, 1, 0.5);
+  position: relative;
+  top: 30px;
+}
+#edit_heading {
+  font-family: 'Allan', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+  text-shadow: 0 0 20px #73cbde;
+  color: rgb(41, 62, 138);
+}
+.edit_button {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  width: 90px;
+}
+.cancel_edit {
+  margin-top: 1px;
+  margin-bottom: 30px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  width: 90px;
+}
+.edit_button:hover, .cancel_edit:hover {
+  color: #73cbde;
+}
+
+/*----------SUMMONER STATS----------*/
+#playerstats {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/b129uaelr/SRBackground.png") no-repeat center center fixed;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 30% 2% 30%;
+  min-width: 200px;
+  position: relative;
+  top: 280px;
+  border: 8px outset rgb(71, 70, 69);
+}
+.statslink{
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  color: black;
+}
+.statslink:visited {
+  color: black;
+}
+.statslink:hover {
+  color: rgb(145, 42, 54);
+}
+.level {
+  font-family: 'Merriweather', serif;
+  color: rgb(19, 89, 89);
+  font-size: 20px;
+  // text-shadow: 0 0 20px rgb(226, 159, 60);
+}
+#summoner_name {
+  // font-family: 'Corben', serif;
+  font-size: 30  px;
+}
+
+/*---------TOTAL WINS---------*/
+#queue{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 25px;
+  padding-bottom: 20px;
+  min-height: 850px;
+}
+#queuesummary{
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+}
+.queuetype{
+  font-size: 20px;
+  font-family: 'Sansita one', serif;
+  color: rgb(117, 22, 22);
+  position: relative;
+  margin: 2px 0 0 0;
+  top: 15px;
+}
+.queuewins {
+  position: relative;
+  top: 15px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/*---------LEAGUE----------*/
+#league {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 15% 2% 15%;
+  position: relative;
+  top: 225px;
+  padding-bottom: 20px;
+}
+#leagueheading{
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+}
+.tier{
+  font-size: 25px;
+  font-family: 'Sansita one', serif;
+  color: rgb(117, 22, 22);
+  position: relative;
+  top: 15px;
+  text-shadow: 0 0 20px rgb(201, 213, 127);
+
+}
+.leaguedetails {
+  position: relative;
+  top: 15px;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/*----------MASTERIES----------*/
+#masteries{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 25px;
+  padding-bottom: 20px;
+}
+#masteries_heading {
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+}
+.masteries_category{
+  font-size: 25px;
+  font-family: 'Sansita one', serif;
+  color: rgb(117, 22, 22);
+  position: relative;
+  margin: 2px 0 0 0;
+  top: 15px;
+}
+.masteries_details{
+  position: relative;
+  top: 15px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: rgb(85, 17, 17);
+}
+
+/*----------RUNES----------*/
+#runes{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 25px;
+  padding-bottom: 20px;
+}
+#runes_heading {
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+}
+.runes_category{
+  font-size: 25px;
+  font-family: 'Sansita one', serif;
+  color: rgb(117, 22, 22);
+  position: relative;
+  margin: 2px 0 0 0;
+  top: 15px;
+}
+.runes_details{
+  position: relative;
+  top: 15px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: rgb(85, 17, 17);
+}
+
+/*----------RECENT MATCHES----------*/
+#recent_matches {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 25px;
+  padding-bottom: 20px;
+}
+#recent_matches_heading{
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 37px;
+}
+.match_stats {
+  font-size: 25px;
+  font-family: 'Sansita one', serif;
+  color: rgb(117, 22, 22);
+  position: relative;
+  margin: 0;
+  top: 15px;
+  margin-bottom: 40px;
+}
+.substats {
+  display: inline-block;
+  margin: 0 30% 0 30%;
+  text-align: left;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+.statdetails{
+  margin: 0;
+}
+.statdetails2{
+  margin: 0;
+  color: rgb(14, 29, 69);
 }
