@@ -71,9 +71,9 @@ html {
   font-family: 'Roboto Slab', serif;
 }*/
 .search_input {
-  position: relative;
-  top: 330px;
-  display: block;
+  // position: relative;
+  // top: 330px;
+  display: inline-block;
   margin: 0 auto;
   padding: 10px;
   width: 30%;
@@ -88,9 +88,9 @@ html {
 }
 .search_button {
   position: relative;
-  top: 270px;
-  left: 215px;
-  display: block;
+  top: 0px;
+  right: 50px;
+  display: inline-block;
   margin: 0 auto;
   padding: 7px 20px 7px 20px;
   color: black;
@@ -98,6 +98,11 @@ html {
   // border-radius: 100%;
   font-size: 14px;
   border: 0;
+}
+.api_form {
+  position: relative;
+  top: 330px;
+  left: 35%;
 }
 .search_button:hover {
   /*box-shadow: 3px 0 20px #73cbde, 0 -3px 20px #73cbde, 0 3px 20px #73cbde, -3px 0 20px #73cbde;*/
@@ -391,8 +396,77 @@ body {
   font-family: 'Sansita one', serif;
 }
 .summonerdetails_answer {
-  margin: 5px 0 20px 0;
+  margin: 5px 0 10px 0;
   color: rgb(41, 59, 93);
   font-size: 25px;
   font-family: 'Raleway', serif;
+}
+.stalkhere {
+  margin: 0;
+  padding: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px #e4ad33;
+  text-shadow: 0 0 20px rgb(127, 135, 213);
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  color: black;
+  font-weight: bold;
+}
+.stalkheresubmit {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  padding: 4px 15px 4px 15px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+}
+.stalkheresubmit:hover {
+  color: rgb(233, 207, 68);
+}
+.back_to_list {
+  padding: 4px 20px 4px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  display: block;
+  margin: 0 auto 30px auto;
+  position: relative;
+  top: 60px;
+}
+.back_to_list:hover {
+  color: #73cbde;
+}
+.edit_profile{
+  padding: 4px 15px 4px 15px;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+.edit_profile:hover {
+  color: rgb(233, 207, 68)
+}
+.delete_profile {
+  padding: 4px 15px 4px 15px;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 13px;
+}
+.delete_profile:hover {
+  color: rgb(233, 207, 68);
 }

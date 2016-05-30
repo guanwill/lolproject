@@ -25,15 +25,19 @@
   <p class="summonerdetails_answer"><%= @account.fav_item %></p>
 
   <form action = "/search" method = "POST">
-    <input type="text" name="summonerName" placeholder="Stalk this summoner here">
-    <button type="submit" name="button" >SEARCH</button>
+    <input class="stalkhere" type="text" name="summonerName" placeholder="Stalk this summoner here">
+    <button class="stalkheresubmit" type="submit" name="button" >Search</button>
   </form>
 
   <%if current_user && @account.id == current_user.id %>
-  <p><%= button_to 'EDIT', edit_account_path(@account), method: :get %> <%= button_to 'DELETE', account_path(@account), method: :delete %></p>
+    <%= button_to edit_account_path(@account), class: 'edit_profile', method: :get do %>
+      <i class="fa fa-pencil-square-o fa-2x"></i>
+    <%end%>
+
+    <%= button_to account_path(@account), class: 'delete_profile', method: :delete do %>
+      <i class="fa fa-trash-o fa-2x"></i>
+    <%end%>
   <%end%>
-
-
-  <p><%= button_to 'BACK', accounts_path(@account), method: :get %></p>
-
 </div>
+
+  <p><%= button_to 'Back', accounts_path(@account), class: 'back_to_list', method: :get %></p>
