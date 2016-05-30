@@ -7,6 +7,7 @@ class AccountsController < ApplicationController
     @account = Account.new(account_params)
 
     if @account.save
+
       session[:account_id] = @account.id  #must create a session for user to use where thet are in. database only exists while user is logged in and thats it
       redirect_to root_path  #when user creates an account, we auto log them into a 'session' and take them to the root path /homepage
     else
@@ -29,7 +30,7 @@ class AccountsController < ApplicationController
   end
 
   def show
-    @account = Account.find(params[:id])   #we declare global variable here so we can use it in our show.html.erb. here we grab the account id, and in show.html.erb, we will decide what info to display
+    @account = Account.find(params[:id])   
   end
 
   def update

@@ -49,7 +49,7 @@ html {
   display: block;
   text-align: center;
   position: relative;
-  top: 240px;
+  top: 280px;
   margin: 0;
   font: 90px 'Lobster';
   /*font-weight: bold;*/
@@ -72,7 +72,7 @@ html {
 }*/
 .search_input {
   position: relative;
-  top: 280px;
+  top: 330px;
   display: block;
   margin: 0 auto;
   padding: 10px;
@@ -88,13 +88,14 @@ html {
 }
 .search_button {
   position: relative;
-  top: 290px;
+  top: 270px;
+  left: 215px;
   display: block;
   margin: 0 auto;
   padding: 7px 20px 7px 20px;
-  color: white;
-  background: rgba(0, 0, 0, 1);
-  border-radius: 7px;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  // border-radius: 100%;
   font-size: 14px;
   border: 0;
 }
@@ -102,6 +103,9 @@ html {
   /*box-shadow: 3px 0 20px #73cbde, 0 -3px 20px #73cbde, 0 3px 20px #73cbde, -3px 0 20px #73cbde;*/
   /*box-shadow: 0 0 20px #367b8a;*/
   color: #73cbde;
+}
+.search_button:active {
+  border: 0;
 }
 /*.logo {
   color: white;
@@ -113,7 +117,7 @@ body {
   /*body { background-color:#333; }*/
 }
 
-/*#snow{
+#snow{
 	background: none;
 	font-family: Androgyne;
 	background-image: url('http://s33.postimg.org/b7dtoh4tb/snow1.png'), url('http://s33.postimg.org/mvh2ai8pr/snow2.png'), url('http://s33.postimg.org/yxzf1d0v3/snow3.png');
@@ -132,7 +136,7 @@ body {
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}*/
+}
 
 /*----------SIGN UP PAGE----------*/
 #signupform {
@@ -272,7 +276,7 @@ body {
   height: 300px;
 }
 .login_button{
-  position: relative
+  position: relative;
   margin: 50px;
   padding: 4px 15px 4px 15px;
   color: white;
