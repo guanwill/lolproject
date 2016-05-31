@@ -32,5 +32,5 @@ class HomeController < ApplicationController
     @league = HTTParty. get "https://oce.api.pvp.net/api/lol/oce/v2.5/league/by-summoner/#{params[:summonerID]}/entry?api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
   end
 
-  
+
 end

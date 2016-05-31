@@ -17,7 +17,8 @@
       <% i = 0 %>
       <% if runes["slots"] %>
         <% while i < runes["slots"].length %>
-          <p>Slot <%= runes["slots"][i]["runeSlotId"] %>: <%= runes["slots"][i]["runeId"] %></p>
+          <p>Slot <%= runes["slots"][i]["runeSlotId"] %>: <%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_name %></p>
+          <em><%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_description %></em>
           <% i += 1 %>
         <%end%>
       <%end%>

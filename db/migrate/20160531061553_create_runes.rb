@@ -1,6 +1,6 @@
-class CreateRunesLists < ActiveRecord::Migration
+class CreateRunes < ActiveRecord::Migration
   def change
-    create_table :runes_lists do |t|
+    create_table :runes do |t|
       t.integer :rune_id
       t.string :rune_name
       t.string :rune_description
