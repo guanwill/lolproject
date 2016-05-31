@@ -64,10 +64,10 @@ require('httparty')
 # end
 
 # ----------GET MAP LIST API---------
-@map_index = HTTParty.get "https://global.api.pvp.net/api/lol/static-data/oce/v1.2/map?api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
-@map_index["data"].each do |id, map|
-  @map = Map.create({
-    :map_id => item["mapId"],
-    :map_name => item["mapName"],
-  })
-end
+# @map_index = HTTParty.get "https://global.api.pvp.net/api/lol/static-data/oce/v1.2/map?api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
+# @map_index["data"].each do |id, map|
+#   @map = Map.create({
+#     :map_id => map["mapId"],
+#     :map_name => map["mapName"],
+#   })
+# end

@@ -8,9 +8,24 @@
 
     <div class="substats">
 
-    <p class="statdetails"><%= recent["gameMode"] %> <%= recent["gameType"] %> </p>
-    <p class="statdetails"> Sub Game Type: <%= recent["subType"] %> </p>
-    <p class="statdetails"> Map: <%= recent["mapId"] %> </p>
+    <p class="statdetails"><%= recent["gameMode"] %> <%= recent["gameType"].gsub(/_/, ' ') %> </p>
+    <p class="statdetails"> Sub Game Type: <%= recent["subType"].gsub(/_/, ' ').titleize  %> </p>
+
+    <p class="statdetails"> Map:
+    <% if Map.find_by(:map_id => recent["mapId"]).map_name == "ProvingGroundsNew" %>
+      <span> Howling Abyss </span>
+    <% elsif Map.find_by(:map_id => recent["mapId"]).map_name == "SummonersRift" %>
+      <span> Summoners Rift </span>
+    <% elsif Map.find_by(:map_id => recent["mapId"]).map_name == "CrystalScar" %>
+      <span> Crystal Scar </span>
+    <% elsif Map.find_by(:map_id => recent["mapId"]).map_name == "NewTwistedTreeline" %>
+      <span> Twisted Treeline </span>
+    <% elsif Map.find_by(:map_id => recent["mapId"]).map_name == "SummonersRiftNew" %>
+      <span> Summoners Rift </span>
+    <%end%>
+    </p>
+
+
     <% if recent["stats"]["win"] == true %>
       <p class="statdetails"> WL: Win </p>
     <% else %>
@@ -32,8 +47,7 @@
     <p class="statdetails2"> Gold Earned: <%= recent["stats"]["goldEarned"] %> </p>
     <p class="statdetails2"> Spell 1: <%= Spell.find_by(:spell_id => recent["spell1"]).spell_name %> Spell 2: <%= Spell.find_by(:spell_id => recent["spell2"]).spell_name %> </p>
 
-    <p class="statdetails2"> Item 1: <%= Item.find_by(:item_id => recent["stats"]["item0"]).item_name %></p>
-    <p class="statdetails2"> Item 2: <%= Item.find_by(:item_id => recent["stats"]["item1"]).item_name %></p>
+
 
 
   </div>
