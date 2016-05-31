@@ -22,7 +22,7 @@
 
     <br/>
 
-    <p class="statdetails2"> Champion: <%= recent["championId"] %> </p>
+    <p class="statdetails2"> Champion: <%= Champion.find_by(:champion_id => recent["championId"]).champion_name %> </p>
     <p class="statdetails2"> Level: <%= recent["stats"]["level"] %></p>
     <p class="statdetails2"> KDA: <%=recent["stats"]["championsKilled"]%>/<%=recent["stats"]["numDeaths"]%>/<%=recent["stats"]["assists"]%> </p>
     <p class="statdetails2"> Minion Kills: <%= recent["stats"]["minionsKilled"] %></p>
