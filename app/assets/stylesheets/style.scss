@@ -686,7 +686,7 @@ html {
   font-family: 'Sansita one', serif;
   color: rgb(117, 22, 22);
   position: relative;
-  margin: 2px 0 0 0;
+  margin: 5px 0 0 0;
   top: 15px;
 }
 .masteries_details{
@@ -696,22 +696,23 @@ html {
   margin-top: 5px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  // color: rgb(85, 17, 17);
+  color: rgb(85, 17, 17);
 }
 .masteries_body {
   display: inline-block;
 }
 .masteries_name {
   color: rgb(9, 53, 71);
-  // margin: 0;
+  margin: 10px;
   text-align:  center;
-  font-size: 18px;
+  font-size: 21px;
+  padding-top: 10px;
 }
-// .masteries_description {
-//   margin: 0 0 20px 0;
-//   max-width: 700px;
-//   font-size: 12px;
-// }
+.masteries_description {
+  margin: 0 0 20px 0;
+  max-width: 500px;
+  font-size: 12px;
+}
 
 
 /*----------RUNES----------*/

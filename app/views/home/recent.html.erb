@@ -30,8 +30,11 @@
     <p class="statdetails2"> Total Damage Dealt to Champions: <%= recent["stats"]["totalDamageDealtToChampions"] %></p>
     <p class="statdetails2"> Total Damage Dealt: <%= recent["stats"]["totalDamageDealt"] %></p>
     <p class="statdetails2"> Gold Earned: <%= recent["stats"]["goldEarned"] %> </p>
-    <p class="statdetails2"> Spell 1: <%= recent["spell1"] %> Spell 2: <%= recent["spell2"] %> </p>
-    <p class="statdetails2"> Item 1: <%= recent["stats"]["item0"] %> Item 2: <%= recent["stats"]["item1"] %> Item 3: <%= recent["stats"]["item2"] %> Item 4: <%= recent["stats"]["item3"] %> Items 5: <%= recent["stats"]["item4"] %> Item 6: <%= recent["stats"]["item5"] %> Item 7: <%= recent["stats"]["item6"] %> </p>
+    <p class="statdetails2"> Spell 1: <%= Spell.find_by(:spell_id => recent["spell1"]).spell_name %> Spell 2: <%= Spell.find_by(:spell_id => recent["spell2"]).spell_name %> </p>
+
+    <p class="statdetails2"> Item 1: <%= Item.find_by(:item_id => recent["stats"]["item0"]).item_name %></p>
+    <p class="statdetails2"> Item 2: <%= Item.find_by(:item_id => recent["stats"]["item1"]).item_name %></p>
+
 
   </div>
     <!-- <p> Stats: <%= recent["stats"] %> </p> -->

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531133033) do
+ActiveRecord::Schema.define(version: 20160531153828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,22 @@ ActiveRecord::Schema.define(version: 20160531133033) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "items", force: :cascade do |t|
+    t.integer  "item_id"
+    t.string   "item_name"
+    t.string   "item_description"
+    t.string   "item_image"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "maps", force: :cascade do |t|
+    t.integer  "map_id"
+    t.string   "map_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "masteries", force: :cascade do |t|
     t.integer  "mastery_id"
     t.string   "mastery_name"
@@ -55,6 +71,15 @@ ActiveRecord::Schema.define(version: 20160531133033) do
     t.string   "rune_image"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "spells", force: :cascade do |t|
+    t.integer  "spell_id"
+    t.string   "spell_name"
+    t.string   "spell_description"
+    t.string   "spell_image"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
