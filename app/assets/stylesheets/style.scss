@@ -717,12 +717,13 @@ html {
   top: 37px;
 }
 .runes_category{
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Sansita one', serif;
   color: rgb(117, 22, 22);
   position: relative;
   margin: 2px 0 0 0;
   top: 15px;
+  padding: 10px;
 }
 .runes_details{
   position: relative;
@@ -732,6 +733,24 @@ html {
   margin-bottom: 10px;
   padding-bottom: 10px;
   color: rgb(85, 17, 17);
+}
+.rune_slot{
+  font-size: 20px;
+  color: rgb(9, 53, 71);
+  margin: 0;
+  text-align: left;
+}
+.slot {
+  color: rgb(99, 20, 20);
+}
+.slot_description {
+  font-size: 16px;
+  color: black;
+}
+.runes_body {
+  display: inline-block;
+  // position: relative;
+  // left: 40px;
 }
 
 /*----------RECENT MATCHES----------*/

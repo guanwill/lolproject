@@ -4,6 +4,8 @@
 <!-- <p><%= @runes.inspect %><p> -->
 <!-- <%= @runes["#{params[:summonerID]}"].inspect %> -->
 
+<div class="runes_body">
+
 <% if @runes["#{params[:summonerID]}"]["pages"] %>
   <% @runes["#{params[:summonerID]}"]["pages"].each do |runes| %>
       <p class="runes_category"><b><%= runes["name"] %> </b></p>
@@ -17,12 +19,13 @@
       <% i = 0 %>
       <% if runes["slots"] %>
         <% while i < runes["slots"].length %>
-          <p>Slot <%= runes["slots"][i]["runeSlotId"] %>: <%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_name %></p>
-          <em><%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_description %></em>
+          <p class="rune_slot"> <span class="slot">Slot <%= runes["slots"][i]["runeSlotId"] %>:</span> <%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_name %>&nbsp <span class="slot_description"> <%= Rune.find_by(:rune_id => runes["slots"][i]["runeId"]).rune_description %></span></p>
           <% i += 1 %>
         <%end%>
       <%end%>
   <%end%>
+
+</div>
 
 <%else @runes["status"]["status_code"] == 404 %>
   <p> This player does not have any runes. What a noob! </p>
