@@ -1,22 +1,30 @@
 <div id="masteries">
 
-<h1 id="masteries_heading"><b> Masteries </b></h1>
+  <h1 id="masteries_heading"><b> Masteries </b></h1>
 
-<% @masteries["#{params[:summonerID]}"]["pages"].each do |masteries| %>
-    <p class="masteries_category"><b><%= masteries["name"] %> </b></p>
+<% if @masteries["#{params[:summonerID]}"]["pages"] %>
 
-    <% if masteries["current"] == true %>
-      <p class="masteries_details"> Current: Yes </p>
-    <% else %>
-      <p class="masteries_details"> Current: No
-    <% end %>
+  <% @masteries["#{params[:summonerID]}"]["pages"].each do |masteries| %>
+      <p class="masteries_category"><b><%= masteries["name"] %> </b></p>
 
-    <% i = 0 %>
-    <% while i < 10 %>
-      <p class="masteries_name">Mastery: <%= masteries["masteries"][i]["id"] %>&nbsp&nbsp&nbsp Rank: <%= masteries["masteries"][i]["rank"] %></p>
-      <% i += 1 %>
-    <%end%>
+      <% if masteries["current"] == true %>
+        <p class="masteries_details"> Current: Yes </p>
+      <% else %>
+        <p class="masteries_details"> Current: No
+      <% end %>
 
+      <% i = 0 %>
+
+      <% if masteries["masteries"] %>
+        <% while i < masteries["masteries"].length %>
+          <p class="masteries_name">Mastery: <%= masteries["masteries"][i]["id"] %>&nbsp&nbsp&nbsp Rank: <%= masteries["masteries"][i]["rank"] %></p>
+          <% i += 1 %>
+        <%end%>
+      <%end%>
+  <%end%>
+
+<%else @masteries["status"]["status_code"] == 404%>
+  <p> This player does not have any masteries. What a noob! </p>
 <%end%>
 
 </div>

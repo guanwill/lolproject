@@ -12,6 +12,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Corben:bold' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Shadows+Into+Light|Architects+Daughter|Kaushan+Script|Courgette|Permanent+Marker|Rock+Salt' rel='stylesheet' type='text/css'>
 
 
 </head>
@@ -21,13 +22,13 @@
 
     <header class="nav">
       <ul>
-        <!-- <li class="logo"> LOLward </li> -->
-        <!-- <img class='logo' src="http://s33.postimg.org/az6btpr5r/lol_logo2.jpg" alt=""> -->
+        <!-- <li id="logo"> LW </li> -->
         <li> <%= link_to 'Home', root_path, class: 'nav_text' %> </li>
+        <li> <%= link_to 'About', about_path, class: 'nav_text' %> </li>
         <li><%= link_to 'Community', accounts_path, class: 'nav_text' %></li>
 
         <% if logged_in? %>
-        <li class="welcome_user"> Welcome, <%= current_user.name %>! </li>
+        <li><a class="welcome_user" href="/accounts/<%=current_user.id%>">Welcome, <%= current_user.name %>!</a></li>
 
         <li> <%= link_to 'Logout', login_path, class: 'nav_text', :method => :delete, :data => {
           :confirm => 'Are you sure?'} %> </li>

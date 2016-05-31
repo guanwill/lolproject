@@ -55,6 +55,7 @@ class AccountsController < ApplicationController
 
   def destroy
     @account = Account.find(params[:id])
+    session[:account_id]=nil
     @account.destroy
     redirect_to root_path
   end

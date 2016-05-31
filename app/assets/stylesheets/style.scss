@@ -12,11 +12,15 @@ li {
   display: inline-block;
   /*padding: 5px;*/
 }
-li.welcome_user {
+a.welcome_user {
   /*padding: 8px;*/
   color: rgb(40, 129, 161);
   font-family: 'Merriweather', serif;
   font-size: 15px;
+  text-decoration: none;
+}
+a.welcome_user:hover {
+  color: rgb(62, 154, 121);
 }
 .nav_text {
   text-decoration: none;
@@ -39,6 +43,11 @@ li.welcome_user {
   top: 0;
   z-index: 1;
 }
+// #logo {
+//   color: white;
+//   position: absolute;
+//   left: 10px;
+// }
 html {
   background: url("http://s33.postimg.org/5lurmxenz/lolashe2.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -112,16 +121,6 @@ html {
 .search_button:active {
   border: 0;
 }
-/*.logo {
-  color: white;
-  font-family: 'Roboto Slab', serif;
-  =position: absolute;
-  left: 5px;
-}*/
-body {
-  /*body { background-color:#333; }*/
-}
-
 #snow{
 	background: none;
 	font-family: Androgyne;
@@ -191,13 +190,17 @@ body {
   background: rgba(1, 1, 1, 0.5);
 }
 #signupheading {
- font-family: 'Allan', Helvetica, Arial, sans-serif;
+ font-family: 'Kaushan Script', cursive;
+ // font-family: 'Allan', Helvetica, Arial, sans-serif;
+ // font-family: 'Permanent Marker', cursive;
+ // font-family: 'Rock Salt', cursive;
+ // font-family: 'Courgette', cursive;
  font-size: 50px;
  line-height: 70px;
  position: relative;
  top: 37px;
  text-shadow: 0 0 20px #73cbde;
- color: rgb(41, 62, 138);
+ color: rgb(22, 63, 83);
 
  /*text-shadow: 0 0 20px #73cbde;*/
 }
@@ -308,13 +311,13 @@ body {
   top: 30px;
 }
 #summonerlistheading {
-  font-family: 'Allan', Helvetica, Arial, sans-serif;
+  font-family: 'Kaushan Script', cursive;
   font-size: 50px;
   line-height: 70px;
   position: relative;
   top: 37px;
   text-shadow: 0 0 20px #73cbde;
-  color: rgb(41, 62, 138);
+  color: rgb(22, 63, 83);
 }
 .summonerdetails {
   text-decoration: none;
@@ -331,6 +334,7 @@ body {
 .listdescription {
   font-family: 'Merriweather', serif;
   margin: 50px 0 20px 0;
+  // text-shadow: 0 0 20px #73cbde;
 }
 #poster {
   margin: 0 15px 30px 15px;
@@ -772,4 +776,50 @@ body {
 .statdetails2{
   margin: 0;
   color: rgb(14, 29, 69);
+}
+
+/*----------ABOUT US----------*/
+#about {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(114, 120, 156);
+  margin: 0 10% 2% 10%;
+  position: relative;
+  top: 25px;
+  padding-bottom: 20px;
+  min-height: 700px;
+}
+#aboutheading {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 50px;
+  line-height: 70px;
+  position: relative;
+  top: 60px;
+  text-shadow: 0 0 20px #73cbde;
+  color: rgb(22, 63, 83);
+}
+.about_text{
+  position: relative;
+  top: 100px;
+  font-family: 'Merriweather', serif;
+  color: black;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+  font-size: 20px;
+  text-align: justify;
+}
+.syndra {
+  position: absolute;
+  top: 20px;
+  right: 330px;
+}
+.syndra2 {
+  position: absolute;
+  top: 20px;
+  left: 330px;
 }

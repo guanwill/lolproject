@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/rune_index' => 'home#rune_index'
 
   root 'home#index'
   post '/search' => 'home#search'
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   post '/login' => 'session#create' #for creating account and and logging in
   delete '/login' => 'session#destroy'  #for logging out
 
+  get '/about' => 'about#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
