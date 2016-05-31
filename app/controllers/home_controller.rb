@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def rune_index
-    @rune_index = HTTParty.get "https://oce.api.pvp.net/api/lol/static-data/oce/v1.4/rune?api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
+    @rune_index = HTTParty.get "https://global.api.pvp.net/api/lol/static-data/oce/v1.2/rune?runeListData=all&api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
   end
 
   def search
