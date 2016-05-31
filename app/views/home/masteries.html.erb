@@ -2,8 +2,12 @@
 
   <h1 id="masteries_heading"><b> Masteries </b></h1>
 
-<% if @masteries["#{params[:summonerID]}"]["pages"] %>
 
+
+<div class="masteries_body">
+
+
+<% if @masteries["#{params[:summonerID]}"]["pages"] %>
   <% @masteries["#{params[:summonerID]}"]["pages"].each do |masteries| %>
       <p class="masteries_category"><b><%= masteries["name"] %> </b></p>
 
@@ -14,14 +18,18 @@
       <% end %>
 
       <% i = 0 %>
-
       <% if masteries["masteries"] %>
         <% while i < masteries["masteries"].length %>
-          <p class="masteries_name">Mastery: <%= masteries["masteries"][i]["id"] %>&nbsp&nbsp&nbsp Rank: <%= masteries["masteries"][i]["rank"] %></p>
+          <p class="masteries_name"><span class="mastery_name"><%= Mastery.find_by(:mastery_id => masteries["masteries"][i]["id"]).mastery_name %></span></p>
+
+
+          <!-- <p class="masteries_description"><%= Mastery.find_by(:mastery_id => masteries["masteries"][i]["id"]).mastery_description %></p> -->
           <% i += 1 %>
         <%end%>
       <%end%>
   <%end%>
+
+</div>
 
 <%else @masteries["status"]["status_code"] == 404%>
   <p> This player does not have any masteries. What a noob! </p>

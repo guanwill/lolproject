@@ -4,6 +4,10 @@ class HomeController < ApplicationController
   def index
   end
 
+  def mastery_index
+    @mastery_index = HTTParty.get "https://global.api.pvp.net/api/lol/static-data/oce/v1.2/mastery?masteryListData=all&api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
+  end
+   
   def rune_index
     @rune_index = HTTParty.get "https://global.api.pvp.net/api/lol/static-data/oce/v1.2/rune?runeListData=all&api_key=f94d23f9-73a9-43e6-bf03-62156d895c2a"
   end

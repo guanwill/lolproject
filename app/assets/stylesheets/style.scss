@@ -588,7 +588,8 @@ html {
   display: block;
   text-align: center;
   font-weight: bold;
-  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/6mejg2tj3/maxresdefault3.jpg") no-repeat center center fixed;
+  background-size: cover;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(114, 120, 156);
   margin: 0 10% 2% 10%;
@@ -626,13 +627,14 @@ html {
   display: block;
   text-align: center;
   font-weight: bold;
-  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/6mejg2tj3/maxresdefault3.jpg") no-repeat center center fixed;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(114, 120, 156);
   margin: 0 15% 2% 15%;
   position: relative;
   top: 225px;
   padding-bottom: 20px;
+  background-size: cover;
 }
 #leagueheading{
   font-family: 'Merriweather', serif;
@@ -663,13 +665,14 @@ html {
   display: block;
   text-align: center;
   font-weight: bold;
-  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/6mejg2tj3/maxresdefault3.jpg") no-repeat center center fixed;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(114, 120, 156);
   margin: 0 10% 2% 10%;
   position: relative;
   top: 25px;
   padding-bottom: 20px;
+  background-size: cover;
 }
 #masteries_heading {
   font-family: 'Merriweather', serif;
@@ -679,7 +682,7 @@ html {
   top: 37px;
 }
 .masteries_category{
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Sansita one', serif;
   color: rgb(117, 22, 22);
   position: relative;
@@ -693,21 +696,39 @@ html {
   margin-top: 5px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  color: rgb(85, 17, 17);
+  // color: rgb(85, 17, 17);
 }
+.masteries_body {
+  display: inline-block;
+}
+.masteries_name {
+  color: rgb(9, 53, 71);
+  // margin: 0;
+  text-align:  center;
+  font-size: 18px;
+}
+// .masteries_description {
+//   margin: 0 0 20px 0;
+//   max-width: 700px;
+//   font-size: 12px;
+// }
+
 
 /*----------RUNES----------*/
 #runes{
   display: block;
   text-align: center;
   font-weight: bold;
-  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/6mejg2tj3/maxresdefault3.jpg") no-repeat center center fixed;
+  background-size: cover;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(114, 120, 156);
   margin: 0 10% 2% 10%;
   position: relative;
   top: 25px;
   padding-bottom: 20px;
+  min-height: 700px;
+  background-size: cover;
 }
 #runes_heading {
   font-family: 'Merriweather', serif;
@@ -758,13 +779,14 @@ html {
   display: block;
   text-align: center;
   font-weight: bold;
-  background: url("http://s33.postimg.org/4ai4fb44f/howlingabyss3.jpg") no-repeat center center fixed;
+  background: url("http://s33.postimg.org/6mejg2tj3/maxresdefault3.jpg") no-repeat center center fixed;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(114, 120, 156);
   margin: 0 10% 2% 10%;
   position: relative;
   top: 25px;
   padding-bottom: 20px;
+  background-size: cover;
 }
 #recent_matches_heading{
   font-family: 'Merriweather', serif;
