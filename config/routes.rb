@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get '/rune_index' => 'home#rune_index'
 
   root 'home#index'

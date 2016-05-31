@@ -1,1 +1,12 @@
-<%= @rune_index.inspect %>
+<p>hi</p>
+<p>hi</p>
+<p>hi</p>
+
+
+<% @rune_index.inspect %>
+<%= @rune_index["data"]["5001"].inspect %>
+
+<p> <%= @rune_index["data"]["5001"]["id"] %></p>
+<p><%= @rune_index["data"]["5001"]["name"] %></p>
+<p> <%= @rune_index["data"]["5001"]["description"] %></p>
+<p> <%= @rune_index["data"]["5001"]["image"]["sprite"] %></p>
