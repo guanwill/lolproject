@@ -31,6 +31,8 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
+    @account2 = Account.all
+    @conversations = Conversation.all
   end
 
   def update

@@ -38,6 +38,11 @@
       <i class="fa fa-trash-o fa-2x"></i>
     <%end%>
   <%end%>
+
+  <%if current_user %>
+    <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @account), method: 'post'%>
+  <%end%>
+
 </div>
 
   <p><%= button_to 'Back', accounts_path(@account), class: 'back_to_list', method: :get %></p>

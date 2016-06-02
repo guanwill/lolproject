@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531153828) do
+ActiveRecord::Schema.define(version: 20160601160626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,23 @@ ActiveRecord::Schema.define(version: 20160531153828) do
     t.string   "fav_position"
     t.string   "fav_gamemode"
     t.string   "fav_item"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "email"
     t.string   "password_digest"
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
   end
+
+  add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree
+  add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true, using: :btree
 
   create_table "champions", force: :cascade do |t|
     t.integer  "champion_id"
@@ -36,6 +48,13 @@ ActiveRecord::Schema.define(version: 20160531153828) do
     t.string   "champion_image"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "items", force: :cascade do |t|
@@ -63,6 +82,18 @@ ActiveRecord::Schema.define(version: 20160531153828) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "conversation_id"
+    t.integer  "account_id"
+    t.boolean  "read",            default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["account_id"], name: "index_messages_on_account_id", using: :btree
+  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
 
   create_table "runes", force: :cascade do |t|
     t.integer  "rune_id"
