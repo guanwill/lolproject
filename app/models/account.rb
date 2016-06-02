@@ -9,4 +9,6 @@ class Account < ActiveRecord::Base
 
     validates_confirmation_of :password, allow_nil: true
     validates :fav_champion, presence: true
+
+    # has_many :conversations, on: :recipient_id
 end

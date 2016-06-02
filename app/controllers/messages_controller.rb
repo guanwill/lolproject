@@ -7,23 +7,21 @@ class MessagesController < ApplicationController
   def index
       @messages = @conversation.messages
 
-      if @messages.length > 10
-        @over_ten = true
-        @messages = @messages[-10..-1]
-      end
+      # if @messages.length > 10
+      #   @over_ten = true
+      #   @messages = @messages[-10..-1]
+      # end
 
       if params[:m]
         @over_ten = false
         @messages = @conversation.messages
       end
 
-      if @messages.last
-        if @messages.last.account_id != current_user.id
-          @messages.last.read = true;
-          @messages.last.save
+      if @messages.size > 0
+        @messages.each do |msg|
+          msg.update(:read => true)
         end
       end
-
       @message = @conversation.messages.new
   end
 
