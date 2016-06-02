@@ -458,9 +458,6 @@ html {
   bottom: 8px;
   left: 8px;
 }
-.edit_profile:hover {
-  color: rgb(233, 207, 68)
-}
 .delete_profile {
   padding: 4px 15px 4px 15px;
   color: black;
@@ -472,7 +469,18 @@ html {
   bottom: 10px;
   right: 13px;
 }
-.delete_profile:hover {
+.message_profile {
+  padding: 4px 15px 4px 15px;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 7px;
+  font-size: 14px;
+  border: 0;
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+.delete_profile:hover, .edit_profile:hover, .message_profile:hover {
   color: rgb(233, 207, 68);
 }
 
@@ -545,6 +553,7 @@ html {
 .edit_button:hover, .cancel_edit:hover {
   color: #73cbde;
 }
+
 
 /*----------SUMMONER STATS----------*/
 #playerstats {

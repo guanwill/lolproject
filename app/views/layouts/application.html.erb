@@ -30,6 +30,8 @@
         <% if logged_in? %>
         <li><a class="welcome_user" href="/accounts/<%=current_user.id%>">Welcome, <%= current_user.name %>!</a></li>
 
+        <li><%= link_to 'Inbox', conversations_path, class: 'nav_text' %></li>
+
         <li> <%= link_to 'Logout', login_path, class: 'nav_text', :method => :delete, :data => {
           :confirm => 'Are you sure?'} %> </li>
 
