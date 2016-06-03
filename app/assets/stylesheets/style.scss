@@ -208,12 +208,13 @@ html {
 .signup_button{
   margin-top: 50px;
   margin-bottom: 30px;
-  padding: 4px 15px 4px 15px;
+  padding: 6px 15px 6px 15px;
   color: white;
   background: rgba(0, 0, 0, 1);
   border-radius: 7px;
   font-size: 14px;
   border: 0;
+  font-family: 'Raleway', serif;
 }
 .signup_button:hover{
   color: #73cbde;
@@ -323,6 +324,7 @@ html {
 .summonerdetails {
   text-decoration: none;
   color: black;
+  font-family: 'merriweather', serif;
 }
 .summonerdetails:visited {
   text-decoration: none;
@@ -358,6 +360,7 @@ html {
   border-radius: 7px;
   font-size: 14px;
   border: 0;
+  font-family: 'Raleway', serif;
 }
 #btn:hover, #btn-showall:hover {
   color: #73cbde;
@@ -371,6 +374,7 @@ html {
   border-radius: 7px;
   font-size: 14px;
   border: 0;
+  font-family: 'Raleway', serif;
 }
 .home_button:hover {
   color: #73cbde;
@@ -429,6 +433,7 @@ html {
   border-radius: 7px;
   font-size: 14px;
   border: 0;
+  font-family: 'raleway', serif;
 }
 .stalkheresubmit:hover {
   color: rgb(233, 207, 68);
@@ -444,6 +449,7 @@ html {
   margin: 0 auto 30px auto;
   position: relative;
   top: 60px;
+  font-family: 'Raleway', serif;
 }
 .back_to_list:hover {
   color: #73cbde;
@@ -521,13 +527,13 @@ html {
   top: 30px;
 }
 #edit_heading {
-  font-family: 'Allan', Helvetica, Arial, sans-serif;
+  font-family: 'Kaushan Script', cursive;
   font-size: 50px;
   line-height: 70px;
   position: relative;
   top: 37px;
   text-shadow: 0 0 20px #73cbde;
-  color: rgb(41, 62, 138);
+  color: rgb(22, 63, 83);
 }
 .edit_button {
   margin-top: 50px;
@@ -539,6 +545,7 @@ html {
   font-size: 14px;
   border: 0;
   width: 90px;
+  font-family: 'raleway', serif;
 }
 .cancel_edit {
   margin-top: 1px;
@@ -550,6 +557,7 @@ html {
   font-size: 14px;
   border: 0;
   width: 90px;
+  font-family: 'raleway', serif;
 }
 .edit_button:hover, .cancel_edit:hover {
   color: #73cbde;
@@ -890,12 +898,56 @@ html {
   padding-bottom: 20px;
   min-height: 700px;
 }
+/*----------NAV LEFT----------*/
 .nav-left {
   position: absolute;
   left: 5px;
   font-family: 'Permanent Marker';
-  color: red;
   top: 3.8px;
+  border-radius: 50px;
   // background: red;
   // padding: 8px;
+  text-align: left;
 }
+.nav_text2 {
+  text-align: left;
+  padding: 10px 10px 0 10px;
+  border: 1px solid blue;
+  border-radius: 20px solid blue;
+  color: rgb(40, 129, 161);
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  text-decoration: none;
+  background: orange;
+  width: 100%;
+}
+.pure-menu-children {
+  text-align: left;
+  border: 1px solid blue;
+  background: red;
+  border-radius: 20px;
+  width: 100%;
+
+}
+.pure-menu-item {
+  background: green;
+  border: 20px solid red;
+  width: 100%;
+  border-radius: 20px;
+
+
+}
+
+
+
+/*----------DISQUS---------*/
+// #disqus_thread {
+//   width: 800px;
+//   background: #fff;
+//   margin: 0 auto;
+//   border-radius: 20px;
+//   padding: 20px;
+//   position: relative;
+//   top: 100px;
+//   min-height: 250px;
+// }

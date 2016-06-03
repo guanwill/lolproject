@@ -6,6 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
   <link href='https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Slab|Merriweather|Arvo|Sigmar+One|Pacifico|Play' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Allan:bold' rel='stylesheet' type='text/css'>
@@ -21,12 +23,21 @@
   <div id="snow">
 
     <header class="nav">
-      <ul>
+
+      <div class ="pure-menu pure-menu-horizontal">
+      <ul class = "pure-menu-allow-hover">
         <!-- <li id="logo"> LW </li> -->
         <span class="nav-left">
-        <li> <%= link_to 'Home', root_path, class: 'nav_text' %> </li>
-        <li> <%= link_to 'About', about_path, class: 'nav_text' %> </li>
-        <li><%= link_to 'Community', accounts_path, class: 'nav_text' %></li>
+
+        <li class="pure-menu-allow-hover pure-menu-has-children"> <%= link_to 'Drop Down', root_path, class: 'nav_text' %>
+          <ul class ="pure-menu-children">
+            <li class="pure-menu-item"><%= link_to 'Home', root_path, class: 'nav_text2' %> </li> <br>
+            <li class="pure-menu-item"> <%= link_to 'About', about_path, class: 'nav_text2' %> </li> <br>
+            <li class="pure-menu-item"><%= link_to 'Community', accounts_path, class: 'nav_text2' %></li>
+          </ul>
+
+        </li>
+
         </span>
 
         <% if logged_in? %>
@@ -40,6 +51,9 @@
         <%end%>
 
       </ul>
+
+    </div>
+
     </header>
 
 
