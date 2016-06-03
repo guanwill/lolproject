@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601160626) do
+ActiveRecord::Schema.define(version: 20160603005038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160601160626) do
     t.integer  "recipient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "contributor_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -90,6 +91,8 @@ ActiveRecord::Schema.define(version: 20160601160626) do
     t.boolean  "read",            default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
   end
 
   add_index "messages", ["account_id"], name: "index_messages_on_account_id", using: :btree

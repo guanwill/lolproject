@@ -29,9 +29,16 @@
    <%= f.text_area :body, class: "form-control" %>
  </div>
  <%= f.text_field :account_id, value: current_user.id, type: "hidden" %>
+ <%= f.text_field :sender_id, value: current_user.id, type: "hidden" %>
+ <%= f.text_field :recipient_id, value: @conversation.sender_id == current_user.id ? @conversation.recipient_id : @conversation.sender_id, type: "hidden" %>
+
  <div>
    <%= f.submit "Send Message", class: "ui blue labeled submit icon button" %>
  </div>
 <% end %>
 
+<p><%= @c_id %></p>
+
 <p><%= button_to 'Back', conversations_path, class: 'back_to_list', method: :get %></p>
+
+<p><%= button_to 'delete', conversation_path(@c_id), class: 'back_to_list', method: :delete %></p>

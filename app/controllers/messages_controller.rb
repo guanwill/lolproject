@@ -7,6 +7,14 @@ class MessagesController < ApplicationController
   def index
       @messages = @conversation.messages
 
+      if @messages.size > 0
+        @messages.each do |msg|
+          if msg.recipient_id == current_user.id
+            msg.update(:read => true)
+          end
+        end
+      end
+
       if @messages.length > 10
         @over_ten = true
         @messages = @messages[-10..-1]
@@ -17,11 +25,8 @@ class MessagesController < ApplicationController
         @messages = @conversation.messages
       end
 
-      if @messages.size > 0
-        @messages.each do |msg|
-          msg.update(:read => true)
-        end
-      end
+      @c_id = params[:conversation_id]
+
       @message = @conversation.messages.new
   end
 
@@ -39,7 +44,13 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:body, :account_id)
+    params.require(:message).permit(:body, :account_id, :sender_id, :recipient_id)
+  end
+
+  def destroy
+    @conversation = Message.find(params[:conversations_id])
+    @conversation.destroy
+    redirect_to conversations_path
   end
 
 end
