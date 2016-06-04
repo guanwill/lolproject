@@ -1,7 +1,9 @@
 <div id ="conversations">
 
 <div class=”ui segment”>
-  <h3>Mailbox</h3>
+  <h1 class="conversations_heading">Chats</h1>
+
+  <div class="conversations_body">
 
   <div class=”ui list”>
     <div class=”item”>
@@ -14,7 +16,7 @@
             <% recipient = Account.find(conversation.sender_id) %>
           <% end %>
 
-        <%= link_to recipient.name,   conversation_messages_path(conversation)%>
+        <%= link_to recipient.name, conversation_messages_path(conversation), class: 'buddy_name'%><br>
        <% end %>
      <% end %>
    </div>
@@ -22,7 +24,9 @@
 </div>
 </div>
 
-<p><%= button_to 'Back', accounts_path(@account), class: 'back_to_list', method: :get %></p>
+</div>
+<p><%= button_to 'Back', accounts_path(@account), class: 'back_to_chats', method: :get %></p>
+
 
 
 </div>

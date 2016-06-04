@@ -24,20 +24,11 @@
 
     <header class="nav">
 
-      <div class ="pure-menu pure-menu-horizontal">
-      <ul class = "pure-menu-allow-hover">
-        <!-- <li id="logo"> LW </li> -->
+      <ul>
         <span class="nav-left">
-
-        <li class="pure-menu-allow-hover pure-menu-has-children"> <%= link_to 'Drop Down', root_path, class: 'nav_text' %>
-          <ul class ="pure-menu-children">
-            <li class="pure-menu-item"><%= link_to 'Home', root_path, class: 'nav_text2' %> </li> <br>
-            <li class="pure-menu-item"> <%= link_to 'About', about_path, class: 'nav_text2' %> </li> <br>
-            <li class="pure-menu-item"><%= link_to 'Community', accounts_path, class: 'nav_text2' %></li>
-          </ul>
-
-        </li>
-
+            <li ><%= link_to 'Home', root_path, class: 'nav_text2' %> </li>
+            <li > <%= link_to 'About', about_path, class: 'nav_text2' %> </li>
+            <li ><%= link_to 'Community', accounts_path, class: 'nav_text2' %></li>
         </span>
 
         <% if logged_in? %>
@@ -52,7 +43,7 @@
 
       </ul>
 
-    </div>
+    <!-- </div> -->
 
     </header>
 

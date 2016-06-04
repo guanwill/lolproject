@@ -5,6 +5,9 @@ class MessagesController < ApplicationController
   end
 
   def index
+    @account = Account.all
+    @conversations = Conversation.all
+
       @messages = @conversation.messages
 
       if @messages.size > 0
@@ -15,9 +18,9 @@ class MessagesController < ApplicationController
         end
       end
 
-      if @messages.length > 10
+      if @messages.length > 20
         @over_ten = true
-        @messages = @messages[-10..-1]
+        @messages = @messages[-20..-1]
       end
 
       if params[:m]

@@ -39,7 +39,8 @@
     <%end%>
   <%end%>
 
-  <%if current_user %>
+  <!--if account id of profile you are viewing is not the current_user's id(your id), then show the icon to message -->
+  <%if current_user && @account.id != current_user.id %>
     <%= link_to conversations_path(sender_id: current_user.id, recipient_id: @account), class: 'message_profile', method: 'post' do %>
       <i class="fa fa-comments-o fa-2x"></i>
     <%end%>
@@ -47,8 +48,11 @@
 
 </div>
 
-  <p><%= button_to 'Back', accounts_path(@account), class: 'back_to_list', method: :get %></p>
-
+  <%if current_user && @account.id != current_user.id %>  <!--if the profile is mine, back button will bring me back home. if profile is not mine, bring me back to the community page-->
+    <p><%= button_to 'Back', accounts_path(@account), class: 'back_to_list', method: :get %></p>
+  <%elsif @account.id == current_user.id %>
+    <p><%= button_to 'Back', root_path, class: 'back_to_list', method: :get %></p>
+  <%end%>
 
 
  <!-- <div id="disqus_thread"></div>

@@ -8,7 +8,5 @@ class Account < ActiveRecord::Base
     validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
 
     validates_confirmation_of :password, allow_nil: true
-    validates :fav_champion, presence: true
-
-    # has_many :conversations, on: :recipient_id
+    # validates :fav_champion, presence: true
 end
