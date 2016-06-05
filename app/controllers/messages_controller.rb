@@ -10,6 +10,12 @@ class MessagesController < ApplicationController
 
       @messages = @conversation.messages
 
+      recipient_id = @conversation.recipient_id
+      sender_id = @conversation.sender_id
+      @recipient = Account.find(recipient_id)
+      @sender = Account.find(sender_id)
+
+
       if @messages.size > 0
         @messages.each do |msg|
           if msg.recipient_id == current_user.id

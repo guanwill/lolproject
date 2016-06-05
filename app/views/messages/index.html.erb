@@ -1,7 +1,12 @@
 <div class="messages_body">
 
 <!--HEADING-->
-<h1 class="messages_header">CHAT</h1>
+<%if current_user.id == @recipient.id%>
+  <h1 class="messages_header"><%=@sender.name%></h1>
+<%else%>
+  <h1 class="messages_header"><%=@recipient.name%></h1>
+<%end%>
+
 
 <div class="message_subbody">
   <% if @over_ten %>

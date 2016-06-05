@@ -13,7 +13,7 @@ A webapp that interacts with League of Legends's API. The website name will be *
 ##Accomplishments
 * Built crud around authentication - let users sign up, sign in, edit their account, and delete their account
 * Integrated external API - let users to search for a person's league of legends online profile and statistics
-* Integrate mailbox system so that members of LOLward can message another member by following [this tutorial](https://medium.com/@danamulder/tutorial-create-a-simple-messaging-system-on-rails-d9b94b0fbca1#.rjs6cdozd)
+* Integrated a mailbox system so that members of LOLward can message another member by following [this tutorial](https://medium.com/@danamulder/tutorial-create-a-simple-messaging-system-on-rails-d9b94b0fbca1#.rjs6cdozd)
 * Allow members to get a notification in their inbox when a member has sent them a message
 * Applied pagination to the community page by following [this tutorial](https://gorails.com/episodes/pagination-with-will-paginate).
 
@@ -32,7 +32,7 @@ A webapp that interacts with League of Legends's API. The website name will be *
 * If user hits search with no input to grab online player profile, an error will be returned. _-fixed 1st June_
 * In the online profile card, the api call for a the player's item only returns an id number. League of legends have another database that matches the item id to the item name. I have to replace the item id number with the item name by downloading the latter database and integrating it into mine via seeds.rb. This same problem exists for champion id, masteries id, map id, etc. _-completed 1st June_
 
-##Future Considerations
+##Future Considerations and Reflection
 * Allow users to use the live League of Legends profile card in their forum signatures
 * Allow users to delete specific messages in a conversation
 * Let members favourite other members
@@ -45,6 +45,8 @@ A webapp that interacts with League of Legends's API. The website name will be *
 * Check if game server is online or offline
 * Get/calculate the win rate of a player
 * Get/calculate most used champion of a player
-* In the sign up form, if the user skips a field, it will display the title and blank next to it in their profile. It should be complete gone.
+* Use Devise for authentication
+* Use CSS libraries during the initial stage of project
+* In the sign up form, if the user skips a field, it will display the title and blank next to it in their profile. It should be completely gone.
 
 ##Rails Flow Chart
