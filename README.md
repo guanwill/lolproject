@@ -1,7 +1,7 @@
 #WEEK 6 LEAGUE OF LEGENDS WEB APP
 
 ##Task
-* Build a web application that can CRUD a SQL database and also interacts with an external api. Full details of the project can be found [here](https://github.com/aussieyang/WDI7-Warmups/blob/master/Project2.md)
+Build a web application that can CRUD a SQL database and also interacts with an external api. Full details of the project can be found [here](https://github.com/aussieyang/WDI7-Warmups/blob/master/Project2.md)
 
 ##My Proposal
 A webapp that interacts with League of Legends's API. The website name will be **LOLward** and will include the following features:
@@ -11,11 +11,11 @@ A webapp that interacts with League of Legends's API. The website name will be *
 * Allows consumers to check out a player's online league of Legends profile and statistics
 
 ##Accomplishments
-* Built basic crud around authentication - let users sign up, sign in, edit their account, and delete their account
-* Integrated external API - allows users to search for a league of legends player by username and displays that player's online profile
+* Built crud around authentication - let users sign up, sign in, edit their account, and delete their account
+* Integrated external API - let users to search for a person's league of legends online profile and statistics
 * Integrate mailbox system so that members of LOLward can message another member by following [this tutorial](https://medium.com/@danamulder/tutorial-create-a-simple-messaging-system-on-rails-d9b94b0fbca1#.rjs6cdozd)
 * Allow members to get a notification in their inbox when a member has sent them a message
-* Applied pagination to the community page. As more users sign up, new pages will be created. Tutorial can be found [here](https://gorails.com/episodes/pagination-with-will-paginate)
+* Applied pagination to the community page by following [this tutorial](https://gorails.com/episodes/pagination-with-will-paginate).
 
 ##Challenges
 * Getting the external api call to display the correct contents
@@ -30,7 +30,7 @@ A webapp that interacts with League of Legends's API. The website name will be *
 * When users click on their name displayed on the nav bar, it will direct the user to their profile page _-completed 31st May_
 * Members cannot message themselves _-completed 3rd June_
 * If user hits search with no input to grab online player profile, an error will be returned. _-fixed 1st June_
-* When user searches for a player's item via the api that returns player details, the result for the weapon will be an id number instead of an item name. League of legends have another database that matches the item ID to the item Name. I have to replace the item id number with the item name by downloading League of legends item database and integrating into mine via seeds.rb. This same problem exists for champion id, masteries id, map id, etc. _-completed 1st June_
+* In the online profile card, the api call for a the player's item only returns an id number. League of legends have another database that matches the item id to the item name. I have to replace the item id number with the item name by downloading the latter database and integrating it into mine via seeds.rb. This same problem exists for champion id, masteries id, map id, etc. _-completed 1st June_
 
 ##Future Considerations
 * Allow users to use the live League of Legends profile card in their forum signatures
