@@ -1060,6 +1060,20 @@ html {
   color: rgb(40, 129, 161);
 }
 
+/*--------Pagination--------*/
+.pagination {
+  color: rgb(14, 17, 65);
+  font-size: 20px;
+  font-family: 'merriweather', serif;
+}
+.pagination > a {
+  text-decoration: none;
+  color: rgb(14, 17, 65);
+}
+.pagination > a:hover{
+  color: #73cbde;
+}
+
 /*----------DISQUS---------*/
 // #disqus_thread {
 //   width: 800px;

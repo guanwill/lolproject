@@ -1,3 +1,4 @@
+
 <div id="summonerlist">
 
   <h1 id="summonerlistheading"> Home of LOLward </h1>
@@ -8,11 +9,13 @@
   <button id='btn-showall'>Show All</button>
 
   <div id='posts'>
-  <% Account.all.each do |account| %>
+  <% @pp.each do |account| %>
     <p class="<%=account.name%>"><%= link_to account.name, account, class: 'summonerdetails' %> </p>
   <%end%>
   </div>
 
+  <br><br>
+  <%= will_paginate @pp, class: 'pagination' %>  <!--displays number of pages, next and back buttons-->
   <%= button_to 'Home', root_path, class: 'home_button', method: :get %>
 
 </div>

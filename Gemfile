@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'will_paginate', '~> 3.1.0'
 gem 'materialize-sass'
 gem 'font-awesome-sass'
 gem 'pg'
