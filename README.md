@@ -51,3 +51,14 @@ A webapp that interacts with League of Legends's API. The website name will be *
 
 ##Rails Flow Chart
 ![Controller Flow Chart of LOLward](http://s33.postimg.org/apj49q3m7/IMG_0480.jpg)
+
+###Models
+* Accounts - store LOLward member accounts
+* Conversations - store every conversation initiated
+* Messages - store every line of messages sent
+* Champions - store League of Legends' champions api (Static)
+* Items - store League of Legends' items api (Static)
+* Maps - store League of Legends' maps api (Static)
+* Masteries - store League of Legends' masteries api (Static)
+* Runes - store League of Legends' runes api (Static)
+* Spells - store League of Legends' spells api (Static)
