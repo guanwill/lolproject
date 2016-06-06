@@ -49,7 +49,7 @@ class AccountsController < ApplicationController
     @account.save
     # @account = Account.update(account_params)
     if @account.valid?
-      redirect_to accounts_path  #redirects to accounts#index if creation is successful
+      redirect_to account_path  #redirects to accounts#index if creation is successful
     else
       redirect_to edit_account_path, :flash => {:errors => @account.errors.full_messages.join(', ')}  #redirects back to the form if there are errors in the sign up, does not pass validation
     end

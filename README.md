@@ -50,3 +50,4 @@ A webapp that interacts with League of Legends's API. The website name will be *
 * In the sign up form, if the user skips a field, it will display the title and blank next to it in their profile. It should be completely gone.
 
 ##Rails Flow Chart
+![Controller Flow Chart of LOLward](http://s33.postimg.org/apj49q3m7/IMG_0480.jpg)
