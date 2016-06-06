@@ -3,12 +3,22 @@
 ##Task
 Build a web application that can CRUD a SQL database and also interacts with an external api. Full details of the project can be found [here](https://github.com/aussieyang/WDI7-Warmups/blob/master/Project2.md)
 
-##My Proposal
+##Proposal
 A webapp that interacts with League of Legends's API. The website name will be **LOLward** and will include the following features:
 * Allow consumers to be able to sign up, sign in, edit and delete their LOLward account/profile
 * A community page showing all members of LOLward and lets a member check out another member's profile
 * Allows a member of LOLward to interact with another member via private messaging/inbox system.
 * Allows consumers to check out a player's online league of Legends profile and statistics
+
+Technology and Language Used:
+* Ruby
+* jQuery
+* Rails
+* HTTParty
+* Postgresql
+* Google Fonts
+* Will Pagination
+* CSS3
 
 ##Accomplishments
 * Built crud around authentication - let users sign up, sign in, edit their account, and delete their account
