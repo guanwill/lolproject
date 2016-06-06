@@ -14,11 +14,11 @@ Technology and Language Used:
 * Ruby
 * jQuery
 * Rails
-* HTTParty
+* HTTParty - League of Legends' API
 * Postgresql
 * Google Fonts
-* Will Pagination
-* CSS3
+* Will Pagination Gem
+* HTML5/CSS3
 
 ##Accomplishments
 * Built crud around authentication - let users sign up, sign in, edit their account, and delete their account
